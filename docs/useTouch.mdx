@@ -1,0 +1,36 @@
+---
+name: useTouch
+---
+
+import { Playground } from 'docz';
+import { useTouch } from '../dist/use-events.esm';
+
+# useTouch
+
+```js
+import { useTouch } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [isTouched, bind] = useTouch();
+
+  return (
+    <div {...bind}>
+      You are {isTouched ? 'touching' : 'not touching'} this div
+    </div>
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const [isTouched, bind] = useTouch();
+
+    return (
+      <div {...bind}>
+        You are {isTouched ? 'touching' : 'not touching'} this div
+      </div>
+    );
+  }}
+</Playground>

@@ -1,0 +1,31 @@
+{
+  "dist/react-powerplug.umd.js": {
+    "bundled": 966,
+    "minified": 465,
+    "gzipped": 300
+  },
+  "dist/use-events.cjs.js": {
+    "bundled": 1835,
+    "minified": 878,
+    "gzipped": 326
+  },
+  "dist/use-events.esm.js": {
+    "bundled": 1554,
+    "minified": 650,
+    "gzipped": 219,
+    "treeshaked": {
+      "rollup": {
+        "code": 14,
+        "import_statements": 14
+      },
+      "webpack": {
+        "code": 998
+      }
+    }
+  },
+  "dist/use-events.umd.js": {
+    "bundled": 2186,
+    "minified": 887,
+    "gzipped": 360
+  }
+}

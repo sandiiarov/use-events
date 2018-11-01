@@ -1,0 +1,36 @@
+---
+name: useHover
+---
+
+import { Playground } from 'docz';
+import { useHover } from '../dist/use-events.esm';
+
+# useHover
+
+```js
+import { useHover } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [isHovered, bind] = useHover();
+
+  return (
+    <div {...bind}>
+      You are {isHovered ? 'hovering' : 'not hovering'} this div
+    </div>
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const [isHovered, bind] = useHover();
+
+    return (
+      <div {...bind}>
+        You are {isHovered ? 'hovering' : 'not hovering'} this div
+      </div>
+    );
+  }}
+</Playground>

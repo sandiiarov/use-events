@@ -1,0 +1,36 @@
+---
+name: useActive
+---
+
+import { Playground } from 'docz';
+import { useActive } from '../dist/use-events.esm';
+
+# useActive
+
+```js
+import { useActive } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [isActive, bind] = useActive();
+
+  return (
+    <div {...bind}>
+      You are {isActive ? 'clicking' : 'not clicking'} this div
+    </div>
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const [isActive, bind] = useActive();
+
+    return (
+      <div {...bind}>
+        You are {isActive ? 'clicking' : 'not clicking'} this div
+      </div>
+    );
+  }}
+</Playground>
