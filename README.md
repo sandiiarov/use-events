@@ -4,8 +4,9 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/use-events" target="_blank">
-    <img src="https://img.shields.io/npm/dt/use-events.svg?style=flat-square" alt="npm" />
+    <img src="https://img.shields.io/npm/dt/use-events.svg?style=flat-square" />
   </a>
+  <img src="https://img.shields.io/bundlephobia/minzip/use-events.svg?style=flat-square" />
 </p>
 
 **Use Events** - Events turned into React Hooks.
