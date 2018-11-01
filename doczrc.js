@@ -8,13 +8,13 @@ export default {
   propsParser: false,
   hashRouter: true,
   themeConfig: {
-    // logo: {
-    //   src:
-    //     'https://raw.githubusercontent.com/renatorib/react-powerplug/master/logo.png',
-    //   width: 231,
-    // },
+    logo: {
+      src:
+        'https://user-images.githubusercontent.com/15861257/47831186-789c3400-dd5d-11e8-8119-2846eb0c9e10.png',
+      width: 232,
+    },
     colors: {
-      primary: '#3E9DE1',
+      primary: '#000000',
     },
   },
 };
