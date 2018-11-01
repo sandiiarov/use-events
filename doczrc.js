@@ -14,7 +14,7 @@ export default {
       width: 232,
     },
     colors: {
-      primary: '#000000',
+      primary: '#001a28',
     },
   },
 };
