@@ -9,6 +9,10 @@
 **Use Events** - Events turned into React Hooks.
 Read about [Hooks](https://reactjs.org/docs/hooks-intro.html) feature.
 
+# Documentation
+
+https://sandiiarov.github.io/use-events
+
 # Install
 
 > Note: React 16.7+ is required for Hooks.
