@@ -36,32 +36,26 @@ exposed as `UseEvents`
 ## Quick Examples
 
 ```jsx
-import { State, Toggle } from 'react-powerplug'
-import { Pagination, Tabs, Checkbox } from './MyDumbComponents'
+import { useActive, useFocus } from 'use-events'
+import { Button, Input } from './Components'
 ```
 
 ```jsx
-<State initial={{ offset: 0, limit: 10, totalCount: 200 }}>
-  {({ state, setState }) => (
-    <Pagination {...state} onChange={(offset) => setState({ offset })} />
-  )}
-</State>
+const App = () => {
+  const [isActive, bind] = useActive();
+
+  console.log(isActive);
+
+  return <Button {...bind}>Click me!</Button>;
+};
 ```
 
 ```jsx
-<Toggle initial={true}>
-  {({ on, toggle }) => (
-    <Checkbox checked={on} onChange={toggle} />
-  )}
-</Toggle>
+const App = () => {
+  const [isFocused, bind] = useFocus();
+
+  console.log(isFocused);
+
+  return <Input {...bind} />;
+};
 ```
-
-You can also use a `render` prop instead
-
-```jsx
-<Toggle
-  initial={false}
-  render={({ on, toggle }) => (
-    <Checkbox checked={on} onChange={toggle} />
-  )}
-/>
