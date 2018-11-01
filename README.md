@@ -8,24 +8,29 @@
   </a>
 </p>
 
+**Use Events** - Events turned into React Hooks.
+Read about [Hooks](https://reactjs.org/docs/hooks-intro.html) feature.
+
 # Install
 
-### Node Module
+> Note: React 16.7+ is required for Hooks.
 
-```
+### With npm
+
+```sh
 npm i use-events
 ```
 
-or
+### Or with yarn
 
-```
+```sh
 yarn add use-events
 ```
 
 ### UMD
 
 ```html
-<script src="https://unpkg.com/use-events/dist/use-events.min.js"></script>
+<script src="https://unpkg.com/use-events/dist/use-events.min.js" />
 ```
 
 exposed as `UseEvents`
