@@ -2,12 +2,9 @@
   <img src="/logo.png" alt="Use Events" />
 </h1>
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/use-events" target="_blank">
-    <img src="https://img.shields.io/npm/dt/use-events.svg?style=flat-square" />
-  </a>
-  <img src="https://img.shields.io/bundlephobia/minzip/use-events.svg?style=flat-square" />
-</p>
+
+![npm](https://img.shields.io/npm/dt/use-events.svg)
+![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/use-events.svg)
 
 **Use Events** - Events turned into React Hooks.
 Read about [Hooks](https://reactjs.org/docs/hooks-intro.html) feature.
