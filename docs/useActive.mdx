@@ -4,6 +4,7 @@ name: useActive
 
 import { Playground } from 'docz';
 import { useActive } from '../dist/use-events.esm';
+import { UseActiveExample } from './examples';
 
 # useActive
 
@@ -23,14 +24,4 @@ const Example = () => {
 };
 ```
 
-<Playground>
-  {() => {
-    const [isActive, bind] = useActive();
-
-    return (
-      <div {...bind}>
-        You are {isActive ? 'clicking' : 'not clicking'} this div
-      </div>
-    );
-  }}
-</Playground>
+<UseActiveExample />

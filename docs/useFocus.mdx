@@ -4,6 +4,7 @@ name: useFocus
 
 import { Playground } from 'docz';
 import { useFocus } from '../dist/use-events.esm';
+import { UseFocusExample } from './examples';
 
 # useFocus
 
@@ -24,15 +25,4 @@ const Example = () => {
 };
 ```
 
-<Playground>
-  {() => {
-    const [isFocused, bind] = useFocus();
-
-    return (
-      <div>
-        <input {...bind} placeholder="Focus me" />
-        <div>You are {isFocused ? 'focusing' : 'not focusing'} the input</div>
-      </div>
-    );
-  }}
-</Playground>
+<UseFocusExample />

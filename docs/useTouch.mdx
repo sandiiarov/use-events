@@ -4,6 +4,7 @@ name: useTouch
 
 import { Playground } from 'docz';
 import { useTouch } from '../dist/use-events.esm';
+import { UseTouchExample } from './examples';
 
 # useTouch
 
@@ -23,14 +24,4 @@ const Example = () => {
 };
 ```
 
-<Playground>
-  {() => {
-    const [isTouched, bind] = useTouch();
-
-    return (
-      <div {...bind}>
-        You are {isTouched ? 'touching' : 'not touching'} this div
-      </div>
-    );
-  }}
-</Playground>
+<UseTouchExample />
