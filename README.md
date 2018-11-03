@@ -2,9 +2,9 @@
   <img src="https://user-images.githubusercontent.com/15861257/47832996-82766500-dd66-11e8-87f2-a24ef3904183.png" alt="Use Events" />
 </h1>
 
-
-![npm](https://img.shields.io/npm/dt/use-events.svg)
+![npm](https://img.shields.io/npm/v/use-events.svg)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/use-events.svg)
+![NpmLicense](https://img.shields.io/npm/l/use-events.svg)
 
 **Use Events** - Events turned into React Hooks.
 Read about [Hooks](https://reactjs.org/docs/hooks-intro.html) feature.
