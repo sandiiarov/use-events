@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://user-images.githubusercontent.com/15861257/47832996-82766500-dd66-11e8-87f2-a24ef3904183.png" alt="Use Events" />
+  <img src="https://user-images.githubusercontent.com/15861257/47953124-f53e3680-df46-11e8-99f8-983ef5613d31.png" alt="Use Events" />
 </h1>
 
 ![npm](https://img.shields.io/npm/v/use-events.svg)

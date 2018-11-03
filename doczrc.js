@@ -10,11 +10,11 @@ export default {
   themeConfig: {
     logo: {
       src:
-        'https://user-images.githubusercontent.com/15861257/47831186-789c3400-dd5d-11e8-8119-2846eb0c9e10.png',
+        'https://user-images.githubusercontent.com/15861257/47953123-f53e3680-df46-11e8-81f0-a3e63641a7ef.png',
       width: 232,
     },
     colors: {
-      primary: '#001a28',
+      primary: '#000000',
     },
   },
 };
