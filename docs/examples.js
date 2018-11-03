@@ -4,6 +4,7 @@ import {
   useFocus,
   useHover,
   useTouch,
+  useClickOutside,
 } from '../dist/use-events.esm';
 
 export const UseActiveExample = () => {
@@ -43,6 +44,16 @@ export const UseTouchExample = () => {
   return (
     <div {...bind}>
       You are {isTouched ? 'touching' : 'not touching'} this div
+    </div>
+  );
+};
+
+export const UseClickOutsideExample = () => {
+  const [isActive, bind] = useClickOutside(console.log);
+
+  return (
+    <div {...bind}>
+      You are {isActive ? 'clicking' : 'not clicking'} outside of this div
     </div>
   );
 };

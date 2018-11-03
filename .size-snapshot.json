@@ -5,14 +5,14 @@
     "gzipped": 300
   },
   "dist/use-events.cjs.js": {
-    "bundled": 1835,
-    "minified": 878,
-    "gzipped": 326
+    "bundled": 2831,
+    "minified": 1389,
+    "gzipped": 504
   },
   "dist/use-events.esm.js": {
-    "bundled": 1554,
-    "minified": 650,
-    "gzipped": 219,
+    "bundled": 2524,
+    "minified": 1137,
+    "gzipped": 392,
     "treeshaked": {
       "rollup": {
         "code": 14,
@@ -24,8 +24,8 @@
     }
   },
   "dist/use-events.umd.js": {
-    "bundled": 2186,
-    "minified": 887,
-    "gzipped": 360
+    "bundled": 3244,
+    "minified": 1348,
+    "gzipped": 529
   }
 }

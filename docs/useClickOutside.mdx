@@ -1,0 +1,27 @@
+---
+name: useClickOutside
+---
+
+import { Playground } from 'docz';
+import { useClickOutside } from '../src/useClickOutside';
+import { UseClickOutsideExample } from './examples';
+
+# useClickOutside
+
+```js
+import { useClickOutside } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [isActive, bind] = useClickOutside(event => console.log(event));
+
+  return (
+    <div {...bind}>
+      You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+    </div>
+  );
+};
+```
+
+<UseClickOutsideExample />
