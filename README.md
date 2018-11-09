@@ -14,6 +14,14 @@ Read about [Hooks](https://reactjs.org/docs/hooks-intro.html) feature.
 
 https://sandiiarov.github.io/use-events
 
+## List of hooks
+- [useActive](https://sandiiarov.github.io/use-events/#/docs-use-active)
+- [useClickOutside](https://sandiiarov.github.io/use-events/#/docs-use-click-outside)
+- [useFocus](https://sandiiarov.github.io/use-events/#/docs-use-focus)
+- [useHover](https://sandiiarov.github.io/use-events/#/docs-use-hover)
+- [useMousePosition](https://sandiiarov.github.io/use-events/#/docs-use-mouse-position)
+- [useTouch](https://sandiiarov.github.io/use-events/#/docs-use-touch)
+
 # Install
 
 > Note: React 16.7+ is required for Hooks.
