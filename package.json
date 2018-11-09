@@ -1,6 +1,6 @@
 {
   "name": "use-events",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "",
   "main": "dist/use-events.cjs.js",
   "module": "dist/use-events.esm.js",
