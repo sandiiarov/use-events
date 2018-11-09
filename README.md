@@ -2,6 +2,7 @@
   <img src="https://user-images.githubusercontent.com/15861257/47953124-f53e3680-df46-11e8-99f8-983ef5613d31.png" alt="Use Events" />
 </h1>
 
+![npm](https://img.shields.io/npm/dt/use-events.svg)
 ![npm](https://img.shields.io/npm/v/use-events.svg)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/use-events.svg)
 ![NpmLicense](https://img.shields.io/npm/l/use-events.svg)
