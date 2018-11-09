@@ -1,0 +1,25 @@
+---
+name: useMousePosition
+---
+
+import { UseMousePositionExample } from './examples';
+
+# useMousePosition
+
+```js
+import { useMousePosition } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [x, y, bind] = useMousePosition();
+
+  return (
+    <div {...bind}>
+      {x} - {y}
+    </div>
+  );
+};
+```
+
+<UseMousePositionExample />

@@ -5,6 +5,7 @@ import {
   useHover,
   useTouch,
   useClickOutside,
+  useMousePosition,
 } from '../dist/use-events.esm';
 
 export const UseActiveExample = () => {
@@ -54,6 +55,27 @@ export const UseClickOutsideExample = () => {
   return (
     <div {...bind}>
       You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+    </div>
+  );
+};
+
+export const UseMousePositionExample = () => {
+  const [x, y, bind] = useMousePosition();
+
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxShadow: '0px 0px 1px',
+        width: 200,
+        height: 200,
+        cursor: 'crosshair',
+      }}
+      {...bind}
+    >
+      <b>x:</b> {x} <b>y:</b> {y}
     </div>
   );
 };

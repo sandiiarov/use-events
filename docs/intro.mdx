@@ -35,26 +35,34 @@ exposed as `UseEvents`
 ## Quick Examples
 
 ```jsx
-import { useActive, useFocus } from 'use-events';
-import { Button, Input } from './Components';
+import { useActive, useHover, useMousePosition } from 'use-events';
 ```
 
 ```jsx
 const App = () => {
   const [isActive, bind] = useActive();
 
-  console.log(isActive);
-
-  return <Button {...bind}>Click me!</Button>;
+  return (
+    <button style={{ color: isActive ? 'white' : 'black' }} {...bind}>
+      Click me
+    </button>
+  );
 };
 ```
 
 ```jsx
 const App = () => {
-  const [isFocused, bind] = useFocus();
+  const [isHovered, hoverBind] = useHover();
+  const [x, y, mousePositionBind] = useMousePosition();
 
-  console.log(isFocused);
-
-  return <Input {...bind} />;
+  return (
+    <div {...hoverBind} {...mousePositionBind}>
+      {isHovered && (
+        <span>
+          {x} - {y}
+        </span>
+      )}
+    </div>
+  );
 };
 ```
