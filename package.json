@@ -27,10 +27,8 @@
   },
   "homepage": "https://github.com/sandiiarov/use-events#readme",
   "peerDependencies": {
-    "react": ">=16.6.0",
-    "react-dom": ">=16.6.0"
+    "react": "^16.7.0-alpha.0"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-transform-runtime": "^7.1.0",
