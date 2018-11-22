@@ -1,8 +1,7 @@
 import React from 'react';
 
-const useClickOutside = onClickOutside => {
+const useClickOutside = (ref, onClickOutside) => {
   const [isActive, setActive] = React.useState(false);
-  const ref = React.useRef(null);
 
   React.useEffect(() => {
     document.addEventListener('mousedown', mousedown);
@@ -30,11 +29,7 @@ const useClickOutside = onClickOutside => {
     }
   };
 
-  const bind = {
-    ref,
-  };
-
-  return [isActive, bind];
+  return [isActive];
 };
 
 export default useClickOutside;

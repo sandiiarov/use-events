@@ -12,10 +12,11 @@ import { useClickOutside } from 'use-events';
 
 ```jsx
 const Example = () => {
-  const [isActive, bind] = useClickOutside(event => console.log(event));
+  const ref = React.useRef(null);
+  const [isActive] = useClickOutside(ref, event => console.log(event));
 
   return (
-    <div {...bind}>
+    <div ref={ref}>
       You are {isActive ? 'clicking' : 'not clicking'} outside of this div
     </div>
   );

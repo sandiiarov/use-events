@@ -50,10 +50,11 @@ export const UseTouchExample = () => {
 };
 
 export const UseClickOutsideExample = () => {
-  const [isActive, bind] = useClickOutside(console.log);
+  const ref = React.useRef(null);
+  const [isActive] = useClickOutside(ref, console.log);
 
   return (
-    <div {...bind}>
+    <div ref={ref}>
       You are {isActive ? 'clicking' : 'not clicking'} outside of this div
     </div>
   );
