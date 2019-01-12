@@ -6,7 +6,7 @@ import {
   useTouch,
   useClickOutside,
   useMousePosition,
-} from '../dist/use-events.esm';
+} from '../src';
 
 export const UseActiveExample = () => {
   const [isActive, bind] = useActive();
