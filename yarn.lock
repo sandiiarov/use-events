@@ -781,7 +781,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/preset-typescript@7.1.0":
+"@babel/preset-typescript@7.1.0", "@babel/preset-typescript@^7.1.0":
   version "7.1.0"
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/@babel/preset-typescript/-/preset-typescript-7.1.0.tgz#49ad6e2084ff0bfb5f1f7fb3b5e76c434d442c7f"
   integrity sha1-Sa1uIIT/C/tfH3+ztedsQ01ELH8=
@@ -1083,10 +1083,23 @@
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
   integrity sha1-HTynZHGJFVhPzZ9jRGIbdnJmXGc=
 
+"@types/prop-types@*":
+  version "15.5.8"
+  resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/@types/prop-types/-/prop-types-15.5.8.tgz#8ae4e0ea205fe95c3901a5a1df7f66495e3a56ce"
+  integrity sha1-iuTg6iBf6Vw5AaWh339mSV46Vs4=
+
 "@types/q@^1.5.1":
   version "1.5.1"
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/@types/q/-/q-1.5.1.tgz#48fd98c1561fe718b61733daed46ff115b496e18"
   integrity sha1-SP2YwVYf5xi2FzPa7Ub/EVtJbhg=
+
+"@types/react@^16.7.18":
+  version "16.7.18"
+  resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/@types/react/-/react-16.7.18.tgz#f4ce0d539a893dd61e36cd11ae3a5e54f5a48337"
+  integrity sha1-9M4NU5qJPdYeNs0RrjpeVPWkgzc=
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
 
 "@types/semver@^5.5.0":
   version "5.5.0"
@@ -2934,7 +2947,7 @@ csso@^3.5.0:
   dependencies:
     css-tree "1.0.0-alpha.29"
 
-csstype@^2.5.2:
+csstype@^2.2.0, csstype@^2.5.2:
   version "2.6.0"
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/csstype/-/csstype-2.6.0.tgz#6cf7b2fa7fc32aab3d746802c244d4eda71371a2"
   integrity sha1-bPey+n/DKqs9dGgCwkTU7acTcaI=
@@ -9256,6 +9269,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^3.2.2:
+  version "3.2.2"
+  resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/typescript/-/typescript-3.2.2.tgz#fe8101c46aa123f8353523ebdcf5730c2ae493e5"
+  integrity sha1-/oEBxGqhI/g1NSPr3PVzDCrkk+U=
 
 ua-parser-js@^0.7.18:
   version "0.7.19"

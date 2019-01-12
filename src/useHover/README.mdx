@@ -2,7 +2,8 @@
 name: useHover
 ---
 
-import { UseHoverExample } from './examples';
+import { Playground } from 'docz';
+import useHover from './index.tsx';
 
 # useHover
 
@@ -22,4 +23,13 @@ const Example = () => {
 };
 ```
 
-<UseHoverExample />
+<Playground>
+  {() => {
+    const [isHovered, bind] = useHover();
+    return (
+      <div {...bind}>
+        You are {isHovered ? 'hovering' : 'not hovering'} this div
+      </div>
+    );
+  }}
+</Playground>

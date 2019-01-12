@@ -4,15 +4,16 @@ import replace from 'rollup-plugin-replace';
 import { uglify } from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
-const input = './src/index.js';
+const input = './src/index.ts';
 const external = id => !id.startsWith('.') && !id.startsWith('/');
 const name = 'UseEvents';
 const globals = { react: 'React' };
 
 const getBabelOptions = ({ useESModules }) => ({
-  exclude: '**/node_modules/**',
+  exclude: 'node_modules/**',
   runtimeHelpers: true,
   plugins: [['@babel/plugin-transform-runtime', { useESModules }]],
+  extensions: ['.ts', '.tsx'],
 });
 
 export default [
@@ -26,7 +27,7 @@ export default [
     },
     external: Object.keys(globals),
     plugins: [
-      nodeResolve(),
+      nodeResolve({ extensions: ['.ts', '.tsx'] }),
       babel(getBabelOptions({ useESModules: true })),
       replace({ 'process.env.NODE_ENV': JSON.stringify('development') }),
     ],
@@ -41,7 +42,7 @@ export default [
     },
     external: Object.keys(globals),
     plugins: [
-      nodeResolve(),
+      nodeResolve({ extensions: ['.ts', '.tsx'] }),
       babel(getBabelOptions({ useESModules: true })),
       replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
       uglify(),
@@ -51,12 +52,18 @@ export default [
     input,
     output: { file: pkg.main, format: 'cjs' },
     external,
-    plugins: [babel(getBabelOptions({ useESModules: false }))],
+    plugins: [
+      nodeResolve({ extensions: ['.ts', '.tsx'] }),
+      babel(getBabelOptions({ useESModules: false })),
+    ],
   },
   {
     input,
     output: { file: pkg.module, format: 'es' },
     external,
-    plugins: [babel(getBabelOptions({ useESModules: true }))],
+    plugins: [
+      nodeResolve({ extensions: ['.ts', '.tsx'] }),
+      babel(getBabelOptions({ useESModules: true })),
+    ],
   },
 ];

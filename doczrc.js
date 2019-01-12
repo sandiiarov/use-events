@@ -7,6 +7,7 @@ export default {
   version: pkg.version,
   propsParser: false,
   hashRouter: true,
+  typescript: true,
   themeConfig: {
     logo: {
       src: 'https://bit.ly/2TEAeBu',
