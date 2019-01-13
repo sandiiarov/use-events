@@ -1,6 +1,6 @@
 {
   "name": "use-events",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "",
   "main": "dist/use-events.cjs.js",
   "jsnext:main": "dist/use-events.esm.js",
@@ -11,7 +11,8 @@
     "build:types": "tsc -d --emitDeclarationOnly --outDir typings",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "docz:publish": "npm run docz:build && gh-pages -d .docz/dist"
+    "docz:publish": "npm run docz:build && gh-pages -d .docz/dist",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "rollup-plugin-node-resolve": "4.0.0",
     "rollup-plugin-replace": "2.1.0",
     "rollup-plugin-uglify": "6.0.1",
+    "standard-version": "^4.4.0",
     "typescript": "^3.2.2"
   }
 }
