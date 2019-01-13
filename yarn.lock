@@ -8165,17 +8165,7 @@ react-docgen@^3.0.0-rc.1:
     node-dir "^0.1.10"
     recast "^0.16.0"
 
-react-dom@16.7.0-alpha.2:
-  version "16.7.0-alpha.2"
-  resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/react-dom/-/react-dom-16.7.0-alpha.2.tgz#16632880ed43676315991d8b412cce6975a30282"
-  integrity sha1-FmMogO1DZ2MVmR2LQSzOaXWjAoI=
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.12.0-alpha.2"
-
-react-dom@^16.6.0, react-dom@^16.6.3, react-dom@^16.7.0:
+react-dom@16.7.0, react-dom@^16.6.0, react-dom@^16.6.3, react-dom@^16.7.0:
   version "16.7.0"
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/react-dom/-/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
   integrity sha1-oXsqfKie5zkLwe1euBeDx0YXSLg=
@@ -8301,17 +8291,7 @@ react-sizes@^1.0.4:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
 
-react@16.7.0-alpha.2:
-  version "16.7.0-alpha.2"
-  resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/react/-/react-16.7.0-alpha.2.tgz#924f2ae843a46ea82d104a8def7a599fbf2c78ce"
-  integrity sha1-kk8q6EOkbqgtEEqN73pZn78seM4=
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.12.0-alpha.2"
-
-react@^16.6.0, react@^16.6.3, react@^16.7.0:
+react@16.7.0, react@^16.6.0, react@^16.6.3, react@^16.7.0:
   version "16.7.0"
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
   integrity sha1-tnTsOWsKVxWHOzUERvfqCAKrY4E=
@@ -8900,7 +8880,7 @@ scan-directory@^1.0.0:
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/scan-directory/-/scan-directory-1.0.0.tgz#46b6769dbd893d9bd7490ae9dcc43811a38b7fbb"
   integrity sha1-RrZ2nb2JPZvXSQrp3MQ4EaOLf7s=
 
-scheduler@^0.12.0, scheduler@^0.12.0-alpha.2:
+scheduler@^0.12.0:
   version "0.12.0"
   resolved "https://csdisco.jfrog.io/csdisco/api/npm/npm/scheduler/-/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
   integrity sha1-irF2mZOcCu3FoZamV3Q8SWU4ZHs=
