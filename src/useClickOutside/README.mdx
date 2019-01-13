@@ -2,7 +2,8 @@
 name: useClickOutside
 ---
 
-import { UseClickOutsideExample } from './examples';
+import { Playground } from 'docz';
+import useClickOutside from './index.tsx';
 
 # useClickOutside
 
@@ -23,4 +24,14 @@ const Example = () => {
 };
 ```
 
-<UseClickOutsideExample />
+<Playground>
+  {() => {
+    const ref = React.useRef(null);
+    const [isActive] = useClickOutside(ref, event => console.log(event));
+    return (
+      <div ref={ref}>
+        You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+      </div>
+    );
+  }}
+</Playground>

@@ -7,10 +7,10 @@ export default {
   version: pkg.version,
   propsParser: false,
   hashRouter: true,
+  typescript: true,
   themeConfig: {
     logo: {
-      src:
-        'https://user-images.githubusercontent.com/15861257/47953123-f53e3680-df46-11e8-81f0-a3e63641a7ef.png',
+      src: 'https://bit.ly/2TEAeBu',
       width: 232,
     },
     colors: {

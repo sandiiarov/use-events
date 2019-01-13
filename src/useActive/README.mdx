@@ -2,7 +2,8 @@
 name: useActive
 ---
 
-import { UseActiveExample } from './examples';
+import { Playground } from 'docz';
+import useActive from './index.tsx';
 
 # useActive
 
@@ -22,4 +23,13 @@ const Example = () => {
 };
 ```
 
-<UseActiveExample />
+<Playground>
+  {() => {
+    const [isActive, bind] = useActive();
+    return (
+      <div {...bind}>
+        You are {isActive ? 'clicking' : 'not clicking'} this div
+      </div>
+    );
+  }}
+</Playground>

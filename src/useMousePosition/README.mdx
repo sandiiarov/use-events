@@ -1,0 +1,46 @@
+---
+name: useMousePosition
+---
+
+import { Playground } from 'docz';
+import useMousePosition from './index.tsx';
+
+# useMousePosition
+
+```js
+import { useMousePosition } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [x, y, bind] = useMousePosition();
+
+  return (
+    <div {...bind}>
+      {x} - {y}
+    </div>
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const [x, y, bind] = useMousePosition();
+    return (
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0px 0px 1px',
+          width: 200,
+          height: 200,
+          cursor: 'crosshair',
+        }}
+        {...bind}
+      >
+        <b>x:</b> {x} <b>y:</b> {y}
+      </div>
+    );
+  }}
+</Playground>

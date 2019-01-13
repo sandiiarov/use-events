@@ -2,7 +2,8 @@
 name: useTouch
 ---
 
-import { UseTouchExample } from './examples';
+import { Playground } from 'docz';
+import useTouch from './index.tsx';
 
 # useTouch
 
@@ -22,4 +23,13 @@ const Example = () => {
 };
 ```
 
-<UseTouchExample />
+<Playground>
+  {() => {
+    const [isTouched, bind] = useTouch();
+    return (
+      <div {...bind}>
+        You are {isTouched ? 'touching' : 'not touching'} this div
+      </div>
+    );
+  }}
+</Playground>
