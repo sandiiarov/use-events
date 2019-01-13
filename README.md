@@ -16,12 +16,12 @@ https://sandiiarov.github.io/use-events
 
 ## List of hooks
 
-- [useActive](https://sandiiarov.github.io/use-events/#/src-docs-use-active)
-- [useClickOutside](https://sandiiarov.github.io/use-events/#/src-docs-use-click-outside)
-- [useFocus](https://sandiiarov.github.io/use-events/#/src-docs-use-focus)
-- [useHover](https://sandiiarov.github.io/use-events/#/src-docs-use-hover)
-- [useMousePosition](https://sandiiarov.github.io/use-events/#/src-docs-use-mouse-position)
-- [useTouch](https://sandiiarov.github.io/use-events/#/src-docs-use-touch)
+- [useActive](https://sandiiarov.github.io/use-events/#/src-use-active)
+- [useClickOutside](https://sandiiarov.github.io/use-events/#/src-use-click-outside)
+- [useFocus](https://sandiiarov.github.io/use-events/#/src-use-focus)
+- [useHover](https://sandiiarov.github.io/use-events/#/src-use-hover)
+- [useMousePosition](https://sandiiarov.github.io/use-events/#/src-use-mouse-position)
+- [useTouch](https://sandiiarov.github.io/use-events/#/src-use-touch)
 
 # Install
 
