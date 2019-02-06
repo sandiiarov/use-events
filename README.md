@@ -25,7 +25,7 @@ https://sandiiarov.github.io/use-events
 
 # Install
 
-> Note: React 16.7+ is required for Hooks.
+> Note: React 16.8+ is required for Hooks.
 
 ### With npm
 
