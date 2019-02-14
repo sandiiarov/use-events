@@ -29,7 +29,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@7.2.2", "@babel/core@^7.0.0", "@babel/core@^7.1.6", "@babel/core@^7.2.2":
+"@babel/core@7.2.2", "@babel/core@^7.0.0", "@babel/core@^7.1.6":
   version "7.2.2"
   resolved "https://registry.npmjs.org/@babel/core/-/core-7.2.2.tgz#07adba6dde27bb5ad8d8672f15fde3e08184a687"
   integrity sha512-59vB0RWt09cAct5EIe58+NzGP4TFSD3Bz//2/ELy3ZeTeKF6VTD1AXlH8BGGbCX0PuobZBsIzO7IAI9PH67eKw==
@@ -857,7 +857,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/preset-typescript@7.1.0", "@babel/preset-typescript@^7.1.0":
+"@babel/preset-typescript@7.1.0":
   version "7.1.0"
   resolved "https://registry.npmjs.org/@babel/preset-typescript/-/preset-typescript-7.1.0.tgz#49ad6e2084ff0bfb5f1f7fb3b5e76c434d442c7f"
   integrity sha512-LYveByuF9AOM8WrsNne5+N79k1YxjNB6gmpCQsnuSBAcV8QUeB+ZUxQzL7Rz7HksPbahymKkq2qBR+o36ggFZA==
@@ -1013,11 +1013,6 @@
   resolved "https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@pika/babel-plugin-esm-import-rewrite@^0.3.7":
-  version "0.3.10"
-  resolved "https://registry.npmjs.org/@pika/babel-plugin-esm-import-rewrite/-/babel-plugin-esm-import-rewrite-0.3.10.tgz#737002810711cb6e60f86a26a4fb3efce419d684"
-  integrity sha512-q/6ixfzbu5/1jueGLCfoX1crFf5QXJAdhmGja/+o/ZYj1rufauv9SW4cT6wqJp5wLbHDdA8SOASgA8pNsJkWwQ==
-
 "@pika/pack@0.3.1":
   version "0.3.1"
   resolved "https://registry.npmjs.org/@pika/pack/-/pack-0.3.1.tgz#a8dc9dfad776199a60061c113c46fb80773632fe"
@@ -1068,16 +1063,6 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-build-types@0.3.10":
-  version "0.3.10"
-  resolved "https://registry.npmjs.org/@pika/plugin-build-types/-/plugin-build-types-0.3.10.tgz#39226a6c15fe907da5295a20b6fceae009a3b20c"
-  integrity sha512-6rZzfrFkt2VLSh9yyGWsNXP7Xygf+1oC0hYxyHNQaPHsn+xWGs4GInmtjcwaEiJYRgRWophu1909BCq7q5Vpsw==
-  dependencies:
-    "@pika/types" "^0.3.5"
-    execa "^1.0.0"
-    mkdirp "^0.5.1"
-    typescript "^3.0.0"
-
 "@pika/plugin-build-web@0.3.10":
   version "0.3.10"
   resolved "https://registry.npmjs.org/@pika/plugin-build-web/-/plugin-build-web-0.3.10.tgz#1f90dee19d9b366b15c24341949240b8805fef1d"
@@ -1091,18 +1076,17 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-standard-pkg@0.3.10":
+"@pika/plugin-ts-standard-pkg@0.3.10":
   version "0.3.10"
-  resolved "https://registry.npmjs.org/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.3.10.tgz#5e39e973e3e2a7945869ca83f96a827ae6190186"
-  integrity sha512-79bZspehTR2TNphHzyqs2x4quplTb1TFAAByX9IGe0R3EhoXud2CZeAbotM2euBydm5FMJyb53XVwRvLr574Bg==
+  resolved "https://registry.npmjs.org/@pika/plugin-ts-standard-pkg/-/plugin-ts-standard-pkg-0.3.10.tgz#d05a5b27b1933b92b1e0d4dd19e072d7f5746e85"
+  integrity sha512-9Hmkg1+o7Zs/67b1yWrWjq4BfHVsZXHJt98lhsMIwuusz950XmyyWl0jY4Nya/Qg9Guj91TQyMYKbrsekpQGcg==
   dependencies:
-    "@pika/types" "^0.3.5"
-    "@types/node" "^10.12.18"
-    standard-pkg "^0.4.0"
+    execa "^1.0.0"
+    standard-pkg "^0.2.0"
 
 "@pika/types@^0.3.3", "@pika/types@^0.3.5":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.3.8.tgz#4356dcfdc115c5371bc0b96a31d12e4e506ceb53"
+  version "0.3.1"
+  resolved "https://registry.npmjs.org/@pika/types/-/types-0.3.8.tgz#4356dcfdc115c5371bc0b96a31d12e4e506ceb53"
   integrity sha512-hzc0IHPvz4sdlaXP4Gzu9x1WF6CUTxyXbiYDLzxJQP9kvp8w4raeL0TB9YVFyayy6bplTaakTIoNrayy0ApBbw==
 
 "@shellscape/koa-send@^4.1.0":
@@ -1245,11 +1229,6 @@
   version "0.0.39"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
-
-"@types/minimist@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
-  integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
 "@types/node@*", "@types/node@^10.11.7":
   version "10.12.18"
@@ -9041,23 +9020,15 @@ stackframe@^1.0.4:
   resolved "https://registry.npmjs.org/stackframe/-/stackframe-1.0.4.tgz#357b24a992f9427cba6b545d96a14ed2cbca187b"
   integrity sha512-to7oADIniaYwS3MhtCa/sQhrxidCCQiF/qp4/m5iN3ipf0Y7Xlri0f6eG29r08aL7JYl8n32AF3Q5GYBZ7K8vw==
 
-standard-pkg@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.npmjs.org/standard-pkg/-/standard-pkg-0.4.0.tgz#14faa7e682bf7fab7fe6c944cb5edf7033372aa3"
-  integrity sha512-m8Wj92BQanTfvWIYnFek6+4Ywuh+jM3S+Ojp7+2h2u7ItNf5LbaaXg61fUWtEYOLLXqpsvn2jkdahArQAE91ZQ==
+standard-pkg@^0.2.0:
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/standard-pkg/-/standard-pkg-0.2.2.tgz#7fe86cce9ed7b186f7a6c1c18b8cf3ecb0845d15"
+  integrity sha512-nLezZP5lg8TnolbfI9nqaJjUIwG7hmUG69TOPIIp5+2m4JGfItrSNk/6OcCA8eSL6JwvCUfCbrGKntzrB8H/Vw==
   dependencies:
-    "@babel/core" "^7.2.2"
     "@babel/parser" "^7.1.5"
-    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
-    "@babel/plugin-syntax-import-meta" "^7.2.0"
-    "@babel/preset-typescript" "^7.1.0"
     "@babel/traverse" "^7.1.5"
-    "@pika/babel-plugin-esm-import-rewrite" "^0.3.7"
-    "@types/minimist" "^1.2.0"
     chalk "^2.1.0"
     glob "^7.1.1"
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
 
 state-toggle@^1.0.0:
   version "1.0.1"
@@ -9515,7 +9486,7 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.3.3, typescript@^3.0.0:
+typescript@3.3.3:
   version "3.3.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-3.3.3.tgz#f1657fc7daa27e1a8930758ace9ae8da31403221"
   integrity sha512-Y21Xqe54TBVp+VDSNbuDYdGw0BpoR/Q6wo/+35M8PAU0vipahnyduJWirxxdxjsAkS7hue53x2zp8gz7F05u0A==
