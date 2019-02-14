@@ -35,8 +35,8 @@
     "@types/react": "16.8.3",
     "docz": "0.13.7",
     "docz-theme-default": "0.12.9",
-    "react": "16.8.1",
-    "react-dom": "16.8.1",
+    "react": "16.8.2",
+    "react-dom": "16.8.2",
     "typescript": "3.3.3"
   }
 }
