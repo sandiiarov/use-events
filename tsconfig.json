@@ -2,9 +2,10 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "jsx": "react",
     "moduleResolution": "node",
-    "strict": true
+    "jsx": "react",
+    "strict": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"]
 }

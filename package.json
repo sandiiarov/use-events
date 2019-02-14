@@ -2,53 +2,43 @@
   "name": "use-events",
   "version": "1.1.10",
   "description": "Event Hooks",
-  "main": "dist/use-events.cjs.js",
-  "jsnext:main": "dist/use-events.esm.js",
-  "module": "dist/use-events.esm.js",
-  "typings": "dist/typings/index.d.ts",
   "scripts": {
-    "build": "yarn build:types && yarn build:lib",
-    "build:lib": "rollup -c",
-    "build:types": "tsc -d --emitDeclarationOnly --outDir dist/typings",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "docz:publish": "npm run docz:build && gh-pages -d .docz/dist",
-    "release": "standard-version"
+    "tsc": "tsc --noEmit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sandiiarov/use-events.git"
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript",
+      "@babel/preset-react"
+    ]
   },
-  "keywords": [
-    "react",
-    "react-dom",
-    "hooks",
-    "react-hooks"
-  ],
-  "author": "Alex Sandiiarov <sandiiarov@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sandiiarov/use-events/issues"
+  "@pika/pack": {
+    "pipeline": [
+      ["@pika/plugin-standard-pkg"],
+      ["@pika/plugin-build-node"],
+      ["@pika/plugin-build-web"],
+      ["@pika/plugin-build-types"]
+    ]
   },
-  "homepage": "https://github.com/sandiiarov/use-events#readme",
+  "peerDependencies": {
+    "react": ">=16.8.1"
+  },
   "devDependencies": {
-    "@babel/core": "7.2.2",
-    "@babel/plugin-transform-runtime": "7.2.0",
     "@babel/preset-env": "7.3.1",
     "@babel/preset-react": "7.0.0",
     "@babel/preset-typescript": "7.1.0",
+    "@pika/pack": "0.3.1",
+    "@pika/plugin-build-node": "0.3.10",
+    "@pika/plugin-build-types": "0.3.10",
+    "@pika/plugin-build-web": "0.3.10",
+    "@pika/plugin-standard-pkg": "0.3.10",
     "@types/react": "16.8.2",
     "docz": "0.13.7",
     "docz-theme-default": "0.12.9",
-    "gh-pages": "2.0.1",
-    "react": "16.8.0",
-    "react-dom": "16.8.0",
-    "rollup": "1.1.2",
-    "rollup-plugin-babel": "4.3.2",
-    "rollup-plugin-node-resolve": "4.0.0",
-    "rollup-plugin-replace": "2.1.0",
-    "rollup-plugin-uglify": "6.0.2",
-    "standard-version": "4.4.0",
-    "typescript": "3.3.1"
+    "react": "16.8.1",
+    "react-dom": "16.8.1",
+    "typescript": "3.3.3"
   }
 }

@@ -38,11 +38,3 @@ npm i use-events
 ```sh
 yarn add use-events
 ```
-
-### UMD
-
-```html
-<script src="https://unpkg.com/use-events/dist/use-events.min.js" />
-```
-
-exposed as `UseEvents`
