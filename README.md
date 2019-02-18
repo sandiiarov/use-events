@@ -4,7 +4,6 @@
 
 ![npm](https://img.shields.io/npm/dt/use-events.svg)
 ![npm](https://img.shields.io/npm/v/use-events.svg)
-![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/use-events.svg)
 ![NpmLicense](https://img.shields.io/npm/l/use-events.svg)
 
 **Use Events** - Events turned into React Hooks.
