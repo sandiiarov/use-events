@@ -1078,10 +1078,10 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-build-web@0.3.10":
-  version "0.3.10"
-  resolved "https://registry.npmjs.org/@pika/plugin-build-web/-/plugin-build-web-0.3.10.tgz#1f90dee19d9b366b15c24341949240b8805fef1d"
-  integrity sha512-Lu9lLtKcMWx3aEzE2PcreS9V70FOKtyxvPj5ciNsC5N/JHx5WAFa4RaUfYjlCmzx2oI7LKt/4X6tB7Tfpu2dbw==
+"@pika/plugin-build-web@0.3.11":
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-web/-/plugin-build-web-0.3.11.tgz#ef799484343881f4fc82b36932288ce20f6f785a"
+  integrity sha512-3GfIkQFffzMMNtQ92BMX/HkvcYK8HkE2+kSPiHli6i6f8Qva5tspKILbq30NduBylMrasQsTm8JHKLm0/iwsGg==
   dependencies:
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     "@babel/plugin-syntax-import-meta" "^7.2.0"
@@ -1091,10 +1091,10 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-ts-standard-pkg@0.3.11":
-  version "0.3.11"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-ts-standard-pkg/-/plugin-ts-standard-pkg-0.3.11.tgz#db4912b7d1afd7a7c1eadd4c568b4893bd264e03"
-  integrity sha512-SzXizAoPqel78/Tx3It3iIuqudYz889quRh8Qdz9qvAcY54TCww26n6Y0VdDHAfNDbG9/lIsySROSlHvT9ic5Q==
+"@pika/plugin-ts-standard-pkg@0.3.10":
+  version "0.3.10"
+  resolved "https://registry.npmjs.org/@pika/plugin-ts-standard-pkg/-/plugin-ts-standard-pkg-0.3.10.tgz#d05a5b27b1933b92b1e0d4dd19e072d7f5746e85"
+  integrity sha512-9Hmkg1+o7Zs/67b1yWrWjq4BfHVsZXHJt98lhsMIwuusz950XmyyWl0jY4Nya/Qg9Guj91TQyMYKbrsekpQGcg==
   dependencies:
     execa "^1.0.0"
     standard-pkg "^0.2.0"
