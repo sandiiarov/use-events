@@ -1,6 +1,7 @@
 {
   "name": "use-events",
   "version": "1.1.11",
+  "license": "MIT",
   "description": "Event Hooks",
   "scripts": {
     "docz:dev": "docz dev",
@@ -16,9 +17,15 @@
   },
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-ts-standard-pkg"],
-      ["@pika/plugin-build-node"],
-      ["@pika/plugin-build-web"]
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
     ]
   },
   "peerDependencies": {
