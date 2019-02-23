@@ -23,15 +23,18 @@ const useClickOutside = (
     }
   };
 
-  React.useEffect(() => {
-    document.addEventListener('mousedown', mousedown);
-    document.addEventListener('mouseup', mouseup);
+  React.useEffect(
+    () => {
+      document.addEventListener('mousedown', mousedown);
+      document.addEventListener('mouseup', mouseup);
 
-    return () => {
-      document.removeEventListener('mousedown', mousedown);
-      document.removeEventListener('mouseup', mouseup);
-    };
-  }, []);
+      return () => {
+        document.removeEventListener('mousedown', mousedown);
+        document.removeEventListener('mouseup', mouseup);
+      };
+    },
+    [onClickOutside]
+  );
 
   return [isActive];
 };
