@@ -38,14 +38,8 @@ action "Publish docs" {
   secrets = ["GITHUB_TOKEN"]
 }
 
-action "Tag" {
-  needs = "Master"
-  uses = "actions/bin/filter@master"
-  args = "tag v*"
-}
-
 action "Build package" {
-  needs = "Tag"
+  needs = "Master"
   uses = "actions/npm@master"
   runs = "yarn"
   args = "run pack build"
