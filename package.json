@@ -1,6 +1,6 @@
 {
   "name": "use-events",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "Event Hooks",
   "scripts": {
     "docz:dev": "docz dev",
