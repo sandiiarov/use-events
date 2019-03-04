@@ -1216,10 +1216,10 @@
     strip-bom "^3.0.0"
     validate-npm-package-license "^3.0.4"
 
-"@pika/plugin-build-node@0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.3.12.tgz#ad66b51147cd7726a0bcf512c642016a0ca6bc47"
-  integrity sha512-yQgI3Sqp+oLO5SbVe+sVXXjZ0ck+nSQpkLJzXOsj/3VrWma3gx2JKyNUuY6BQxI1L5Ui4uQnwD+n1o6GQnBSAw==
+"@pika/plugin-build-node@0.3.13":
+  version "0.3.13"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.3.13.tgz#6867bbc492ef9be7c5afcc5855fac1b1ceadf0ca"
+  integrity sha512-EMXW5UhCW1zxC8VXpdblUUBa7ILbAM0EfPhgUWFfCr+vbLuRjltXIuQgqscduTsShHTyRJ99VikYI3RyEhRhMg==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
