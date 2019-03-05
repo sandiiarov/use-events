@@ -1,0 +1,35 @@
+---
+name: useWindowResize
+---
+
+import { Playground } from 'docz';
+import { useWindowResize } from '../src';
+
+# useTouch
+
+```js
+import { useWindowResize } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [height, width] = useWindowResize();
+
+  return (
+    <div>
+      Currently window size : { 'height is : ' + height } and { 'width is : ' + width }
+    </div>
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const [height, width] = useWindowResize();
+    return (
+      <div>
+        Currently window size : { 'height is : ' + height } and { 'width is : ' + width }
+      </div>
+    );
+  }}
+</Playground>
