@@ -1231,10 +1231,10 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-build-web@0.3.13":
-  version "0.3.13"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-build-web/-/plugin-build-web-0.3.13.tgz#10a7bb4fc297bd7d8ced54bab25af617068bb4f9"
-  integrity sha512-rqunlZgrG8O2FzLj+qUIPn5UMqr4Ledfj5d+dgWLrE6PUrLOPOtr20ukuEHqrTXlieAdGI9uR9ldUdDSORwI/g==
+"@pika/plugin-build-web@0.3.14":
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-web/-/plugin-build-web-0.3.14.tgz#bfbadef32a22937519ef8ac2e76462766b4d2d47"
+  integrity sha512-KtC1WDeVWJ3272xS3G4K5Sq0VXK66y3vt72SLGaXwAT0s4BJsj2KfzFqe4UO32v/lezZuKwdAUGxE2fyC9f8oA==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
