@@ -1,6 +1,6 @@
 workflow "TSC, Test, Build and Publish" {
   on = "push"
-  resolves = ["TSC", "Publish docs", "Publish package"]
+  resolves = ["TSC", "Test", "Publish docs", "Publish package"]
 }
 
 action "Install" {
@@ -16,8 +16,15 @@ action "TSC" {
   args = "tsc"
 }
 
+action "Test" {
+  needs = "Install"
+  uses = "actions/npm@master"
+  runs = "yarn"
+  args = "test"
+}
+
 action "Master" {
-  needs = "TSC"
+  needs = ["TSC", "Test"]
   uses = "actions/bin/filter@master"
   args = "branch master"
 }
