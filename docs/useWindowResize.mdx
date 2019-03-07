@@ -17,7 +17,7 @@ const Example = () => {
 
   return (
     <div>
-      Currently window size : { 'height is : ' + height } and { 'width is : ' + width }
+      <b>height:</b> {height} <b>width:</b> {width}
     </div>
   );
 };
@@ -28,7 +28,7 @@ const Example = () => {
     const [height, width] = useWindowResize();
     return (
       <div>
-        Currently window size : { 'height is : ' + height } and { 'width is : ' + width }
+        <b>height:</b> {height} <b>width:</b> {width}
       </div>
     );
   }}

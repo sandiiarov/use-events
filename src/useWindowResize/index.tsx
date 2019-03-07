@@ -7,15 +7,15 @@ const useWindowResize = (): [
   const [height, setHeight] = React.useState(window.innerHeight);
   const [width, setWidth] = React.useState(window.innerWidth);
 
-  const listener = () => {
+  const resize = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   };
 
   React.useEffect(() => {
-    window.addEventListener('resize', listener);
+    window.addEventListener('resize', resize);
     return () => {
-      window.removeEventListener('resize', listener);
+      window.removeEventListener('resize', resize);
     };
   }, []);
 
