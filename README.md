@@ -21,7 +21,7 @@ https://sandiiarov.github.io/use-events
 - [useHover](https://sandiiarov.github.io/use-events/#/docs-use-hover)
 - [useMousePosition](https://sandiiarov.github.io/use-events/#/docs-use-mouse-position)
 - [useTouch](https://sandiiarov.github.io/use-events/#/docs-use-touch)
-- [useWindowResize](https://sandiiarov.github.io/use-events/#/use-window-resize)
+- [useWindowResize](https://sandiiarov.github.io/use-events/#/docs-use-window-resize)
 
 # Install
 
