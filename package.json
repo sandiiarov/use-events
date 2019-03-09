@@ -45,6 +45,9 @@
   "peerDependencies": {
     "react": ">=16.8.1"
   },
+  "dependencies": {
+    "resize-observer-polyfill": "1.5.1"
+  },
   "devDependencies": {
     "@babel/core": "7.3.4",
     "@babel/preset-env": "7.3.4",
