@@ -1,0 +1,62 @@
+---
+name: useResizeObserver
+---
+
+import { Playground } from 'docz';
+import { useResizeObserver } from '../src';
+
+# useResizeObserver
+
+```js
+import { useResizeObserver } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const ref = React.useRef(null);
+  const { top, right, bottom, left, height, width, x, y } = useResizeObserver(
+    ref
+  );
+
+  return (
+    <ul ref={ref}>
+      <li>top: {top}</li>
+      <li>right: {right}</li>
+      <li>bottom: {bottom}</li>
+      <li>left: {left}</li>
+      <li>height: {height}</li>
+      <li>width: {width}</li>
+      <li>x: {x}</li>
+      <li>y: {y}</li>
+    </ul>
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const ref = React.useRef(null);
+    const { top, right, bottom, left, height, width, x, y } = useResizeObserver(
+      ref
+    );
+    return (
+      <ul
+        ref={ref}
+        style={{
+          resize: 'both',
+          overflow: 'auto',
+          border: '1px solid #CED4DE',
+        }}
+      >
+        <li>top: {top}</li>
+        <li>right: {right}</li>
+        <li>bottom: {bottom}</li>
+        <li>left: {left}</li>
+        <li>height: {height}</li>
+        <li>width: {width}</li>
+        <li>x: {x}</li>
+        <li>y: {y}</li>
+      </ul>
+    );
+  }}
+</Playground>
