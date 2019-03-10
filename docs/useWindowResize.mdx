@@ -13,11 +13,12 @@ import { useWindowResize } from 'use-events';
 
 ```jsx
 const Example = () => {
-  const [height, width] = useWindowResize();
+  const [width, height] = useWindowResize();
 
   return (
     <div>
-      <b>height:</b> {height} <b>width:</b> {width}
+      <b>width:</b> {width}
+      <b>height:</b> {height}
     </div>
   );
 };
@@ -25,10 +26,11 @@ const Example = () => {
 
 <Playground>
   {() => {
-    const [height, width] = useWindowResize();
+    const [width, height] = useWindowResize();
     return (
       <div>
-        <b>height:</b> {height} <b>width:</b> {width}
+        <b>width:</b> {width}
+        <b>height:</b> {height}
       </div>
     );
   }}

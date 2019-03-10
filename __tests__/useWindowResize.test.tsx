@@ -1,26 +1,25 @@
-import * as React from 'react';
-import { act, render } from 'react-testing-library';
+import { act, renderHook } from 'react-hooks-testing-library';
+import { fireEvent } from 'react-testing-library';
 import { useWindowResize } from '../src';
 
-test('useWindowResize should react on window resize events', () => {
-  function fireResize(width: number, height: number) {
-    // @ts-ignore
-    window.innerWidth = width;
-    // @ts-ignore
-    window.innerHeight = height;
-    window.dispatchEvent(new Event('resize'));
-  }
+const resize = (width: number, height: number) => {
+  // @ts-ignore
+  window.innerWidth = width;
+  // @ts-ignore
+  window.innerHeight = height;
+  fireEvent(window, new Event('resize'));
+};
 
-  const TestComponent = () => {
-    const [height, width] = useWindowResize();
-    return <span>{`${width}x${height}`}</span>;
-  };
+test('useWindowResize should react on window resize event', () => {
+  let width, height;
 
-  const { container, rerender } = render(<TestComponent />);
-  act(() => fireResize(800, 600));
-  expect(container.firstChild.textContent).toBe('800x600');
-  act(() => fireResize(1024, 768));
-  expect(container.firstChild.textContent).toBe('1024x768');
-  act(() => fireResize(1440, 800));
-  expect(container.firstChild.textContent).toBe('1440x800');
+  renderHook(() => ([width, height] = useWindowResize()));
+
+  act(() => resize(100, 100));
+  expect(width).toBe(100);
+  expect(height).toBe(100);
+
+  act(() => resize(200, 200));
+  expect(width).toBe(200);
+  expect(height).toBe(200);
 });
