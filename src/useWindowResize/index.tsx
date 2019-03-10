@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 const useWindowResize = (): [number, number] => {
-  const [height, setHeight] = React.useState(window.innerHeight);
   const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
 
   const resize = () => {
     setWidth(window.innerWidth);
@@ -17,7 +17,7 @@ const useWindowResize = (): [number, number] => {
     };
   }, []);
 
-  return [height, width];
+  return [width, height];
 };
 
 export default useWindowResize;
