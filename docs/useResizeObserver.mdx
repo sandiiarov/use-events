@@ -14,21 +14,13 @@ import { useResizeObserver } from 'use-events';
 ```jsx
 const Example = () => {
   const ref = React.useRef(null);
-  const { top, right, bottom, left, height, width, x, y } = useResizeObserver(
-    ref
-  );
+  const [width, height] = useResizeObserver(ref);
 
   return (
-    <ul ref={ref}>
-      <li>top: {top}</li>
-      <li>right: {right}</li>
-      <li>bottom: {bottom}</li>
-      <li>left: {left}</li>
-      <li>height: {height}</li>
-      <li>width: {width}</li>
-      <li>x: {x}</li>
-      <li>y: {y}</li>
-    </ul>
+    <div ref={ref}>
+      <b>width:</b> {width}
+      <b>height:</b> {height}
+    </div>
   );
 };
 ```
@@ -36,27 +28,24 @@ const Example = () => {
 <Playground>
   {() => {
     const ref = React.useRef(null);
-    const { top, right, bottom, left, height, width, x, y } = useResizeObserver(
-      ref
-    );
+    const [width, height] = useResizeObserver(ref);
     return (
-      <ul
+      <div
         ref={ref}
         style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           resize: 'both',
           overflow: 'auto',
           border: '1px solid #CED4DE',
         }}
       >
-        <li>top: {top}</li>
-        <li>right: {right}</li>
-        <li>bottom: {bottom}</li>
-        <li>left: {left}</li>
-        <li>height: {height}</li>
-        <li>width: {width}</li>
-        <li>x: {x}</li>
-        <li>y: {y}</li>
-      </ul>
+        <b>width:</b> {width}
+        <b>height:</b> {height}
+      </div>
     );
-  }}
+
+}}
+
 </Playground>
