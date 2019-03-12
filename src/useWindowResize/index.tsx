@@ -4,12 +4,12 @@ const useWindowResize = (): [number, number] => {
   const [width, setWidth] = React.useState(window.innerWidth);
   const [height, setHeight] = React.useState(window.innerHeight);
 
-  const resize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
   React.useEffect(() => {
+    const resize = () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    };
+
     window.addEventListener('resize', resize);
 
     return () => {
