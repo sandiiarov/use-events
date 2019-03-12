@@ -6,25 +6,25 @@ const useClickOutside = (
 ): [boolean] => {
   const [isActive, setActive] = React.useState(false);
 
-  const mousedown = (e: MouseEvent) => {
-    const { current } = ref;
-
-    if (current !== null && !current.contains(e.target as HTMLElement)) {
-      setActive(true);
-      onClickOutside(e);
-    }
-  };
-
-  const mouseup = (e: MouseEvent) => {
-    const { current } = ref;
-
-    if (current !== null && !current.contains(e.target as HTMLElement)) {
-      setActive(false);
-    }
-  };
-
   React.useEffect(
     () => {
+      const mousedown = (e: MouseEvent) => {
+        const { current } = ref;
+
+        if (current !== null && !current.contains(e.target as HTMLElement)) {
+          setActive(true);
+          onClickOutside(e);
+        }
+      };
+
+      const mouseup = (e: MouseEvent) => {
+        const { current } = ref;
+
+        if (current !== null && !current.contains(e.target as HTMLElement)) {
+          setActive(false);
+        }
+      };
+
       document.addEventListener('mousedown', mousedown);
       document.addEventListener('mouseup', mouseup);
 
