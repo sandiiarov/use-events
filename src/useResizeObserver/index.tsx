@@ -24,7 +24,7 @@ const useResizeObserver = (
     return () => {
       resizeObserver.disconnect();
     };
-  }, []);
+  }, [ref]);
 
   return [width, height];
 };
