@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const useHover = (): [
+const useScroll = (): [
   number,
   number,
   number,
@@ -26,4 +26,4 @@ const useHover = (): [
   return [scrollTop, scrollLeft, offsetHeight, offsetWidth, bind];
 };
 
-export default useHover;
+export default useScroll;
