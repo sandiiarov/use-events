@@ -1,0 +1,46 @@
+---
+name: useWheel
+---
+
+import { Playground } from 'docz';
+import { useWheel } from '../src';
+
+# useWheel
+
+```js
+import { useWheel } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [x, y, z, bind] = useWheel();
+
+  return (
+    <div {...bind}>
+      {x} - {y} - {z}
+    </div>
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const [x, y, z, bind] = useWheel();
+    return (
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0px 0px 1px',
+          width: 500,
+          height: 500,
+          cursor: 'crosshair',
+        }}
+        {...bind}
+      >
+        <b>x:</b>{x}<b>y:</b> {y} <b>z:</b> {z}
+      </div>
+    );
+  }}
+</Playground>
