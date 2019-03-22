@@ -1150,12 +1150,19 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-typescript" "^7.3.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.5", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.5", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1":
   version "7.3.4"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.3.4.tgz#73d12ba819e365fcf7fd152aed56d6df97d21c83"
   integrity sha512-IvfvnMdSaLBateu0jfsYIpZTxAc2cKEXEMiezGGN75QcBcecDUKd3PgLAncT0oOgxKy8dd8hrJKj9MfzgfZd6g==
   dependencies:
     regenerator-runtime "^0.12.0"
+
+"@babel/runtime@^7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.2.tgz#f5ab6897320f16decd855eed70b705908a313fe8"
+  integrity sha512-7Bl2rALb7HpvXFL7TETNzKSAeBVCPHELzc0C//9FCxN8nsiueWSJBqaF+2oIJScyILStASR/Cx5WMkXGYTiJFA==
+  dependencies:
+    regenerator-runtime "^0.13.2"
 
 "@babel/template@^7.0.0", "@babel/template@^7.1.0", "@babel/template@^7.1.2", "@babel/template@^7.2.2":
   version "7.2.2"
@@ -9324,13 +9331,13 @@ react-feather@^1.1.4:
   resolved "https://registry.npmjs.org/react-feather/-/react-feather-1.1.6.tgz#2a547e3d5cd5e383d3da0128d593cbdb3c1b32f7"
   integrity sha512-iCofWhTjX+vQwvDmg7o6vg0XrUg1c41yBDZG+l83nz1FiCsleJoUgd3O+kHpOeWMXuPrRIFfCixvcqyOLGOgIg==
 
-react-hooks-testing-library@0.3.7:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/react-hooks-testing-library/-/react-hooks-testing-library-0.3.7.tgz#583d6b9026e458c6cdc28874b952b2359647867f"
-  integrity sha512-SjmPBb0ars9sh37n0MBYz3VZC5QuzUFF6/8LZlprKgsg0YRNXGKsKbuAV8k7dqX8qmprMKzXQqfZmZDFbvZkVg==
+react-hooks-testing-library@0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/react-hooks-testing-library/-/react-hooks-testing-library-0.3.8.tgz#717595ed7be500023963dd502f188aa932bf70f0"
+  integrity sha512-YFnyd2jH2voikSBGufqhprnxMTHgosOHlO5EXhuQycWxfeTCIiw/17aiYbpvRRDRB/0j8QvI/jHXMNVBKw7WzA==
   dependencies:
-    "@babel/runtime" "^7.3.4"
-    react-testing-library "^6.0.0"
+    "@babel/runtime" "^7.4.2"
+    react-testing-library "^6.0.2"
 
 react-hot-loader@^4.6.0, react-hot-loader@^4.6.3:
   version "4.8.0"
@@ -9436,18 +9443,10 @@ react-sizes@^1.0.4:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
 
-react-testing-library@6.0.2:
+react-testing-library@6.0.2, react-testing-library@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-6.0.2.tgz#afd7ddaa174e21cf672605e4e4f6f8156c4c9ef9"
   integrity sha512-hWJIixR/jxJBnemcWI5O2JCMXlwoIpgF1IEUF8EYNEADORSZ9fs8rEJu4ygqyC53l3QOowkNb8D+eF5kGT3srg==
-  dependencies:
-    "@babel/runtime" "^7.3.1"
-    dom-testing-library "^3.13.1"
-
-react-testing-library@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.npmjs.org/react-testing-library/-/react-testing-library-6.0.0.tgz#81edfcfae8a795525f48685be9bf561df45bb35d"
-  integrity sha512-h0h+YLe4KWptK6HxOMnoNN4ngu3W8isrwDmHjPC5gxc+nOZOCurOvbKVYCvvuAw91jdO7VZSm/5KR7TxKnz0qA==
   dependencies:
     "@babel/runtime" "^7.3.1"
     dom-testing-library "^3.13.1"
@@ -9600,6 +9599,11 @@ regenerator-runtime@^0.12.0:
   version "0.12.1"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
   integrity sha512-odxIc1/vDlo4iZcfXqRYFj0vpXFNoGdKMAUieAlFYO6m/nl5e9KR/beGf41z4a1FI+aQgtjhuaSlDxQ0hmkrHg==
+
+regenerator-runtime@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.2.tgz#32e59c9a6fb9b1a4aff09b4930ca2d4477343447"
+  integrity sha512-S/TQAZJO+D3m9xeN1WTI8dLKBBiRgXBlTJvbWjCThHWZj9EvHK70Ff50/tYj2J/fvBY6JtFVwRuazHN2E7M9BA==
 
 regenerator-transform@^0.13.3, regenerator-transform@^0.13.4:
   version "0.13.4"
