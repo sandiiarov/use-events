@@ -63,8 +63,8 @@
     "docz": "0.13.7",
     "docz-theme-default": "0.12.9",
     "jest": "24.5.0",
-    "react": "16.8.5",
-    "react-dom": "16.8.5",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "react-hooks-testing-library": "0.3.8",
     "react-testing-library": "6.0.3",
     "typescript": "3.3.4000"
