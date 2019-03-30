@@ -9,11 +9,11 @@
 **Use Events** - Events turned into React Hooks.
 Read about [Hooks](https://reactjs.org/docs/hooks-intro.html) feature.
 
-# Documentation
+## Documentation
 
 https://sandiiarov.github.io/use-events
 
-## List of hooks
+### List of hooks
 
 - [useActive](https://sandiiarov.github.io/use-events/#/docs-use-active)
 - [useClickOutside](https://sandiiarov.github.io/use-events/#/docs-use-click-outside)
@@ -24,7 +24,7 @@ https://sandiiarov.github.io/use-events
 - [useWindowResize](https://sandiiarov.github.io/use-events/#/docs-use-window-resize)
 - [useResizeObserver](https://sandiiarov.github.io/use-events/#/docs-use-resize-observer)
 
-# Install
+## Installation
 
 > Note: React 16.8+ is required for Hooks.
 
