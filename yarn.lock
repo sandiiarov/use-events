@@ -9435,7 +9435,15 @@ react-sizes@^1.0.4:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
 
-react-testing-library@6.0.3, react-testing-library@^6.0.3:
+react-testing-library@6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-6.0.4.tgz#18aec01bcb8505df5da612c68cf0be134e0f44ae"
+  integrity sha512-7D6/hIvyOr8c51UHgH9CL2ZlzYPFI2Jmjm9hMuUvKR9mIiOEaWr5A7CZ9r7zO9tCK5D15r4uj71BHfJ7Zus3qw==
+  dependencies:
+    "@babel/runtime" "^7.4.2"
+    dom-testing-library "^3.18.2"
+
+react-testing-library@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-6.0.3.tgz#8b5d276a353c17ce4f7486015bb7a1c8827c442c"
   integrity sha512-tN0A6nywSOoL8kriqru3rSdw31PxuquL7xnW6xBI0aTNw0VO3kZQtaEa0npUH9dX0MIsSunB0nbElRrc4VtAzw==
