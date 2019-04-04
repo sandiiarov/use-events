@@ -13,12 +13,19 @@ import { useClickOutside } from 'use-events';
 
 ```jsx
 const Example = () => {
-  const ref = React.useRef(null);
-  const [isActive] = useClickOutside(ref, event => console.log(event));
+  const ref1 = React.useRef(null);
+  const ref2 = React.useRef(null);
+  const [isActive] = useClickOutside([ref1, ref2], event => console.log(event));
 
   return (
-    <div ref={ref}>
-      You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+    <div>
+      <div ref={ref1} style={{ border: '1px dotted black' }}>
+        You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+      </div>
+      <br />
+      <div ref={ref2} style={{ border: '1px dotted black' }}>
+        You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+      </div>
     </div>
   );
 };
@@ -26,11 +33,20 @@ const Example = () => {
 
 <Playground>
   {() => {
-    const ref = React.useRef(null);
-    const [isActive] = useClickOutside(ref, event => console.log(event));
+    const ref1 = React.useRef(null);
+    const ref2 = React.useRef(null);
+    const [isActive] = useClickOutside([ref1, ref2], event =>
+      console.log(event)
+    );
     return (
-      <div ref={ref}>
-        You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+      <div>
+        <div ref={ref1} style={{ border: '1px dotted black' }}>
+          You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+        </div>
+        <br />
+        <div ref={ref2} style={{ border: '1px dotted black' }}>
+          You are {isActive ? 'clicking' : 'not clicking'} outside of this div
+        </div>
       </div>
     );
   }}

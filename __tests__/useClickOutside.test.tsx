@@ -6,18 +6,43 @@ test('useClickOutside should react on click outside and call callback', () => {
   const mockFn = jest.fn();
 
   const TestComponent = () => {
-    const ref = React.useRef(null);
-    const [isActive] = useClickOutside(ref, mockFn);
-    return <div ref={ref}>{isActive ? 'Foo' : 'Baz'}</div>;
+    const ref1 = React.useRef(null);
+    const ref2 = React.useRef(null);
+    const [isActive] = useClickOutside([ref1, ref2], mockFn);
+    return (
+      <div>
+        <div ref={ref1} data-testid="1">
+          {isActive ? 'Foo' : 'Baz'}
+        </div>
+        <div ref={ref2} data-testid="2">
+          {isActive ? 'Foo' : 'Baz'}
+        </div>
+      </div>
+    );
   };
 
-  const { container } = render(<TestComponent />);
+  const { container, getByTestId } = render(<TestComponent />);
 
-  expect(container.firstChild.textContent).toBe('Baz');
+  const firstEl = getByTestId('1');
+  const secondEl = getByTestId('2');
+
+  expect(firstEl.textContent).toBe('Baz');
+  expect(secondEl.textContent).toBe('Baz');
 
   fireEvent.mouseDown(container);
+  expect(firstEl.textContent).toBe('Foo');
+  expect(secondEl.textContent).toBe('Foo');
+  fireEvent.mouseUp(container);
 
-  expect(container.firstChild.textContent).toBe('Foo');
+  fireEvent.mouseDown(firstEl);
+  expect(firstEl.textContent).toBe('Baz');
+  expect(secondEl.textContent).toBe('Baz');
+  fireEvent.mouseUp(firstEl);
 
-  expect(mockFn).toBeCalled();
+  fireEvent.mouseDown(secondEl);
+  expect(firstEl.textContent).toBe('Baz');
+  expect(secondEl.textContent).toBe('Baz');
+  fireEvent.mouseUp(secondEl);
+
+  expect(mockFn).toBeCalledTimes(1);
 });
