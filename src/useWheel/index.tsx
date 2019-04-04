@@ -10,7 +10,6 @@ const useWheel = (): [
   const [z, setZ] = React.useState(0);
   const bind = {
     onWheel: ({ nativeEvent: { deltaX, deltaY, deltaZ, ...other } }: React.WheeEvent) => {
-      console.log('other: ', other);
       setX(deltaX);
       setY(deltaY);
       setZ(deltaZ);
