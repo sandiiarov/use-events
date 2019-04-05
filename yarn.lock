@@ -4629,6 +4629,16 @@ dom-testing-library@^3.18.2:
     pretty-format "^24.5.0"
     wait-for-expect "^1.1.0"
 
+dom-testing-library@^3.19.0:
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.19.0.tgz#652ade2cd93ae98beb52b2878eeb9420d7599832"
+  integrity sha512-gkGXP5GevcjC24Tk6Y6RwrZ7Nz0Ul4bchXV4yHLcnMidMp/EdBCvtHEgHTsZ2yZ4DhUpLowGbJv/1u1Z7bPvtw==
+  dependencies:
+    "@babel/runtime" "^7.3.4"
+    "@sheerun/mutationobserver-shim" "^0.3.2"
+    pretty-format "^24.5.0"
+    wait-for-expect "^1.1.0"
+
 dom-walk@^0.1.0:
   version "0.1.1"
   resolved "https://registry.npmjs.org/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
@@ -9587,13 +9597,13 @@ react-sizes@^1.0.4:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
 
-react-testing-library@6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-6.0.4.tgz#18aec01bcb8505df5da612c68cf0be134e0f44ae"
-  integrity sha512-7D6/hIvyOr8c51UHgH9CL2ZlzYPFI2Jmjm9hMuUvKR9mIiOEaWr5A7CZ9r7zO9tCK5D15r4uj71BHfJ7Zus3qw==
+react-testing-library@6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-6.1.2.tgz#f6bba6eeecedac736eb00b22b4c70bae04535a4f"
+  integrity sha512-z69lhRDGe7u/NOjDCeFRoe1cB5ckJ4656n0tj/Fdcr6OoBUu7q9DBw0ftR7v5i3GRpdSWelnvl+feZFOyXyxwg==
   dependencies:
     "@babel/runtime" "^7.4.2"
-    dom-testing-library "^3.18.2"
+    dom-testing-library "^3.19.0"
 
 react-testing-library@^6.0.3:
   version "6.0.3"
