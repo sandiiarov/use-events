@@ -1592,7 +1592,7 @@
   resolved "https://registry.npmjs.org/@pika/babel-plugin-esm-import-rewrite/-/babel-plugin-esm-import-rewrite-0.3.14.tgz#61c902058e6896f63345aeb36d06c6c98f7c72f2"
   integrity sha512-eetgWXH6Vec5ArWgLf0wziArZdJvpj4yGq+DyxCatCPEimtdyVPnLGadN3ChqBRHW42yLzq7z4yXOBgI62hSUQ==
 
-"@pika/pack@0.3.7":
+"@pika/pack@0.3.7", "@pika/pack@^0.3.6":
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/@pika/pack/-/pack-0.3.7.tgz#fa093b4b075947c8c1d1a72e659522e70966c68e"
   integrity sha512-YoY5eRji4ABupF0SNyeRPFaCZ1VPYTI7ytorgSnphstqup9krBFe41EtEVHXD7VQkINlXKXgJUfTS41spaL2vA==
@@ -1641,11 +1641,12 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-build-types@0.3.14":
-  version "0.3.14"
-  resolved "https://registry.npmjs.org/@pika/plugin-build-types/-/plugin-build-types-0.3.14.tgz#1bf1f3e0ee8d824d7bd01c20faf7c2145e9f3841"
-  integrity sha512-rZheAQ5CB55SBSd+Bub06JLCelNoi9mV8P93Q1qFBVtJrQHpVjsG6fI2c2fgMUmlO/n1QI2E9Sk1WqNWIGrAMQ==
+"@pika/plugin-build-types@0.3.15":
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-types/-/plugin-build-types-0.3.15.tgz#d3f22a53a999d31e95cc650b938b75cfe36fb6da"
+  integrity sha512-Myl17DcAUSdqnHgotLG7rgZvX/D60midVIi2cKAJGjBNrqTpKLV9dNEb0LzQKqH5PLLXzKd/AsH5SEPOOPn3KQ==
   dependencies:
+    "@pika/pack" "^0.3.6"
     "@pika/types" "^0.3.5"
     execa "^1.0.0"
     mkdirp "^0.5.1"
