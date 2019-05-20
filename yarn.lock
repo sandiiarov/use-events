@@ -1671,12 +1671,12 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-standard-pkg@0.3.16":
-  version "0.3.16"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.3.16.tgz#211d869992acb2a47138e1133de9780ddca8ce3a"
-  integrity sha512-qJLMwp4RNTviXzjY+9H0EqkYlIXJ3OpZFxi4OIas82kqRI2D84DLPHGH48AMp05yvbyPMf/rVoIMAaeWbhR+sA==
+"@pika/plugin-standard-pkg@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.4.0.tgz#565ad288268858015c1108519f467dc54e438992"
+  integrity sha512-VNvvl7r7vPVpnOHNeoeJT2EwIywSA3qeY8GC3oKlBaO1aq8Bd44BtbsvZbRvzrp16kZ7sHUsyI4wAYKgQADBhg==
   dependencies:
-    "@pika/types" "^0.3.5"
+    "@pika/types" "^0.4.0"
     "@types/node" "^10.12.18"
     standard-pkg "^0.4.0"
 
