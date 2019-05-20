@@ -1631,16 +1631,16 @@
     strip-bom "^3.0.0"
     validate-npm-package-license "^3.0.4"
 
-"@pika/plugin-build-node@0.3.15":
-  version "0.3.15"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.3.15.tgz#9389a9519cab33927ba6d2f86b298473e0693239"
-  integrity sha512-iB99JwXs3BNTuMikHnzhUI1d3x6JGBxFcGSI2yFSroqP8sFOr57VItWfB2q09QiQ2EKqtNX9sAuUTS8Q0HdWjw==
+"@pika/plugin-build-node@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.4.0.tgz#8824ce505fb200bf81d9cb40a316b110bd710f6b"
+  integrity sha512-G6h6h8Y+BObwVG5Mq1X0munTXw7/WwNa0GdXp6CblH2L8nc6tPlB5gfFGzH0ej32W3XDKXuLV+G9xkvZ1g+MHg==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     "@babel/plugin-syntax-import-meta" "^7.2.0"
     "@babel/preset-env" "^7.2.3"
-    "@pika/types" "^0.3.5"
+    "@pika/types" "^0.4.0"
     babel-plugin-dynamic-import-node-babel-7 "^2.0.7"
     builtin-modules "^3.0.0"
     rollup "^1.1.0"
@@ -1684,6 +1684,11 @@
   version "0.3.14"
   resolved "https://registry.npmjs.org/@pika/types/-/types-0.3.14.tgz#f3a6b1b5b81110d5f795750e6ec4ffad6cfe074a"
   integrity sha512-DhaiWNyfuiausuhkIJug/bSKqmQQjYcgZqXMDvT3fjRN+69/NLsG7Ihfhfi+64R53XQUf/prBe4GzL43K/01Pw==
+
+"@pika/types@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.4.0.tgz#e55f4ddca4d1e6362b7f43ee7afc494c114a7d58"
+  integrity sha512-vgNcz+tvlWtHzLRmuGfpUU8I3tRTfv4YFnhrx8ZXag2kE3kPw/DnC4yMVCx9wgimI1iptyXGDTNYui+kyBGoDg==
 
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.2"
