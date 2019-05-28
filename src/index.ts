@@ -6,3 +6,5 @@ export { default as useMousePosition } from './useMousePosition/index';
 export { default as useResizeObserver } from './useResizeObserver/index';
 export { default as useTouch } from './useTouch/index';
 export { default as useWindowResize } from './useWindowResize/index';
+
+export { callAllEventHandlers } from './helpers';

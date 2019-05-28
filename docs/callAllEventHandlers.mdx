@@ -1,0 +1,44 @@
+---
+name: callAllEventHandlers
+menu: Helpers
+---
+
+import { Playground } from 'docz';
+import { useHover, callAllEventHandlers } from '../src';
+
+# callAllEventHandlers
+
+Returns a function that will invoke all given functions with the its arguments.
+
+```js
+import { useHover, callAllEventHandlers } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const [isHovered, bind] = useHover();
+
+  return (
+    <div
+      onMouseEnter={callAllEventHandlers(bind.onMouseEnter, console.log)}
+      onMouseLeave={callAllEventHandlers(bind.onMouseLeave, console.log)}
+    >
+      You are {isHovered ? 'hovering' : 'not hovering'} this div
+    </div>
+  );
+};
+```
+
+<Playground>
+  {() => {
+    const [isHovered, bind] = useHover();
+    return (
+      <div
+        onMouseEnter={callAllEventHandlers(bind.onMouseEnter, console.log)}
+        onMouseLeave={callAllEventHandlers(bind.onMouseLeave, console.log)}
+      >
+        You are {isHovered ? 'hovering' : 'not hovering'} this div
+      </div>
+    );
+  }}
+</Playground>
