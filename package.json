@@ -50,7 +50,7 @@
     "use-deep-compare": "0.1.0"
   },
   "devDependencies": {
-    "@babel/core": "7.6.3",
+    "@babel/core": "7.6.4",
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
     "@babel/preset-typescript": "7.6.0",
