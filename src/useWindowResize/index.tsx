@@ -1,21 +1,31 @@
 import * as React from 'react';
 
-const useWindowResize = (): [number, number] => {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [height, setHeight] = React.useState(window.innerHeight);
+function getWindowDimensions(serverSideWidth: number, serverSideHeight: number) : [ number, number ] {
+  return isWindowDefined() ? [ window.innerWidth, window.innerHeight ] : [ serverSideWidth, serverSideHeight ];
+}
+
+function isWindowDefined() : boolean {
+  return typeof window !== 'undefined';
+}
+
+const useWindowResize = (serverSideWidth: number = 0, serverSideHeight: number = 0): [number, number] => {
+  const [winWidth, winHeight] = getWindowDimensions(serverSideWidth, serverSideHeight);
+  const [width, setWidth] = React.useState(winWidth);
+  const [height, setHeight] = React.useState(winHeight);
 
   React.useEffect(() => {
     const resize = () => {
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
+      const [newWinWidth, newWinHeight] = getWindowDimensions(serverSideWidth, serverSideHeight);
+      setWidth(newWinWidth);
+      setHeight(newWinHeight);
     };
 
-    window.addEventListener('resize', resize);
+    if(isWindowDefined()) window.addEventListener('resize', resize);
 
     return () => {
-      window.removeEventListener('resize', resize);
+      if(isWindowDefined()) window.removeEventListener('resize', resize);
     };
-  }, []);
+  }, [serverSideWidth, serverSideHeight]);
 
   return [width, height];
 };
