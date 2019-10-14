@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  build:
+  tsc:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -17,10 +17,21 @@ jobs:
         with:
           node-version: 12
       - run: yarn
-      - run: yarn build
+      - run: yarn tsc
+
+  test:
+    needs: tsc
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn test
 
   publish-npm:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -28,6 +39,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: yarn
+      - run: yarn build
       - run: cd pkg
       - run: yarn publish --access public
         env:
