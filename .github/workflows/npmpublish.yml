@@ -9,16 +9,6 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: yarn
-      - run: yarn build
-
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
@@ -33,4 +23,4 @@ jobs:
       - run: cd pkg
       - run: yarn publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
