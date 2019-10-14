@@ -1,20 +1,23 @@
-import * as React from 'react';
+import React from 'react';
 
-const useTouch = (): [
+function useTouch(): [
   boolean,
   {
     onTouchStart: (e: React.TouchEvent) => void;
     onTouchEnd: (e: React.TouchEvent) => void;
   }
-] => {
+] {
   const [isTouched, setTouched] = React.useState(false);
 
-  const bind = {
-    onTouchStart: (e: React.TouchEvent) => setTouched(true),
-    onTouchEnd: (e: React.TouchEvent) => setTouched(false),
-  };
+  const bind = React.useMemo(
+    () => ({
+      onTouchStart: (e: React.TouchEvent) => void setTouched(true),
+      onTouchEnd: (e: React.TouchEvent) => void setTouched(false),
+    }),
+    []
+  );
 
   return [isTouched, bind];
-};
+}
 
 export default useTouch;

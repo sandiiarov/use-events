@@ -1,38 +1,44 @@
-import * as React from 'react';
-import { useDeepCompareEffect } from 'use-deep-compare';
+import React from 'react';
 
-const useClickOutside = (
+function useClickOutside(
   refs: React.RefObject<HTMLElement>[],
   onClickOutside: (e: MouseEvent) => void
-): [boolean] => {
+): [boolean] {
   const [isActive, setActive] = React.useState(false);
 
-  useDeepCompareEffect(() => {
-    const mousedown = (e: MouseEvent) => {
+  const isOutside = React.useCallback(
+    (e: MouseEvent) => {
       const test = refs.map(ref => {
         return (
           ref.current !== null && !ref.current.contains(e.target as HTMLElement)
         );
       });
 
-      if (test.every(Boolean)) {
+      return test.every(Boolean);
+    },
+    [refs]
+  );
+
+  const mousedown = React.useCallback(
+    (e: MouseEvent) => {
+      if (isOutside(e)) {
         setActive(true);
         onClickOutside(e);
       }
-    };
+    },
+    [isOutside, onClickOutside]
+  );
 
-    const mouseup = (e: MouseEvent) => {
-      const test = refs.map(ref => {
-        return (
-          ref.current !== null && !ref.current.contains(e.target as HTMLElement)
-        );
-      });
-
-      if (test.every(Boolean)) {
+  const mouseup = React.useCallback(
+    (e: MouseEvent) => {
+      if (isOutside(e)) {
         setActive(false);
       }
-    };
+    },
+    [isOutside]
+  );
 
+  React.useEffect(() => {
     document.addEventListener('mousedown', mousedown);
     document.addEventListener('mouseup', mouseup);
 
@@ -43,6 +49,6 @@ const useClickOutside = (
   }, [refs, onClickOutside]);
 
   return [isActive];
-};
+}
 
 export default useClickOutside;
