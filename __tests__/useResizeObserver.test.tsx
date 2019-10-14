@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
+import React from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import { useResizeObserver } from '../src';
 

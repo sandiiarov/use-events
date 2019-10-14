@@ -1,21 +1,24 @@
-import * as React from 'react';
+import React from 'react';
 
-const useMousePosition = (): [
+function useMousePosition(): [
   number,
   number,
   { onMouseMove: (e: React.MouseEvent) => void }
-] => {
+] {
   const [x, setX] = React.useState(0);
   const [y, setY] = React.useState(0);
 
-  const bind = {
-    onMouseMove: ({ nativeEvent: { offsetX, offsetY } }: React.MouseEvent) => {
-      setX(offsetX);
-      setY(offsetY);
-    },
-  };
+  const bind = React.useMemo(
+    () => ({
+      onMouseMove: (e: React.MouseEvent) => {
+        setX(e.nativeEvent.offsetX);
+        setY(e.nativeEvent.offsetY);
+      },
+    }),
+    []
+  );
 
   return [x, y, bind];
-};
+}
 
 export default useMousePosition;

@@ -1,32 +1,26 @@
 import React from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
-const useResizeObserver = (
+function useResizeObserver(
   ref: React.RefObject<HTMLElement>
-): [number, number] => {
+): [number, number] {
   const [width, setWidth] = React.useState(0);
   const [height, setHeight] = React.useState(0);
 
   React.useLayoutEffect(() => {
-    const { current } = ref;
-
     const resizeObserver = new ResizeObserver(entries => {
-      const { width, height } = entries[0].contentRect;
-
-      setWidth(width);
-      setHeight(height);
+      setWidth(entries[0].contentRect.width);
+      setHeight(entries[0].contentRect.height);
     });
 
-    if (current !== null) {
-      resizeObserver.observe(current);
+    if (ref.current !== null) {
+      resizeObserver.observe(ref.current);
     }
 
-    return () => {
-      resizeObserver.disconnect();
-    };
+    return () => void resizeObserver.disconnect();
   }, [ref]);
 
   return [width, height];
-};
+}
 
 export default useResizeObserver;

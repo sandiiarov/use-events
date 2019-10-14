@@ -1,20 +1,23 @@
-import * as React from 'react';
+import React from 'react';
 
-const useActive = (): [
+function useActive(): [
   boolean,
   {
     onMouseDown: (e: React.MouseEvent) => void;
     onMouseUp: (e: React.MouseEvent) => void;
   }
-] => {
+] {
   const [isActive, setActive] = React.useState(false);
 
-  const bind = {
-    onMouseDown: (e: React.MouseEvent) => setActive(true),
-    onMouseUp: (e: React.MouseEvent) => setActive(false),
-  };
+  const bind = React.useMemo(
+    () => ({
+      onMouseDown: (e: React.MouseEvent) => void setActive(true),
+      onMouseUp: (e: React.MouseEvent) => void setActive(false),
+    }),
+    []
+  );
 
   return [isActive, bind];
-};
+}
 
 export default useActive;

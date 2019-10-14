@@ -1,23 +1,20 @@
-import * as React from 'react';
+import React from 'react';
 
-const useWindowResize = (): [number, number] => {
+function useWindowResize(): [number, number] {
   const [width, setWidth] = React.useState(window.innerWidth);
   const [height, setHeight] = React.useState(window.innerHeight);
 
-  React.useEffect(() => {
-    const resize = () => {
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
-    };
-
-    window.addEventListener('resize', resize);
-
-    return () => {
-      window.removeEventListener('resize', resize);
-    };
+  const resize = React.useCallback(() => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
   }, []);
 
+  React.useEffect(() => {
+    window.addEventListener('resize', resize);
+    return () => void window.removeEventListener('resize', resize);
+  }, [resize]);
+
   return [width, height];
-};
+}
 
 export default useWindowResize;
