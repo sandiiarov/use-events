@@ -1,0 +1,48 @@
+on: push
+name: TSC, Test, Build and Publish
+jobs:
+  master:
+    name: Master
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Master
+      uses: actions/bin/filter@master
+      with:
+        args: branch master
+    - name: Build package
+      uses: actions/npm@master
+      with:
+        entrypoint: yarn
+        args: run pack build
+    - name: Build docs
+      uses: actions/npm@master
+      with:
+        entrypoint: yarn
+        args: docz:build
+    - name: Install
+      uses: actions/npm@master
+      with:
+        entrypoint: yarn
+        args: install
+    - name: Publish package
+      uses: zackify/npm@354aa07c3dc1f17f66afa69d1ddaac4620dc0668
+      env:
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      with:
+        args: cd pkg && npm publish --access public
+    - name: Publish docs
+      uses: maxheld83/ghpages@v0.1.1
+      env:
+        BUILD_DIR: .docz/dist
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Test
+      uses: actions/npm@master
+      with:
+        entrypoint: yarn
+        args: test
+    - name: TSC
+      uses: actions/npm@master
+      with:
+        entrypoint: yarn
+        args: tsc
