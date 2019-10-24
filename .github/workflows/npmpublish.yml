@@ -18,21 +18,22 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
+          registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         run: yarn
 
-      - name: Typechecking
-        run: yarn tsc
+      # - name: Typechecking
+      #   run: yarn tsc
 
-      - name: Test
-        run: yarn test
+      # - name: Test
+      #   run: yarn test
 
-      - name: Build
-        run: yarn build
+      # - name: Build
+      #   run: yarn build
 
       - name: Publish
-        run: yarn publish --access public
+        run: npm publish
         working-directory: ./pkg
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
