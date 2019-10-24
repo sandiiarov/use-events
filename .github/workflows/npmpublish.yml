@@ -13,35 +13,54 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+
+      - name: Set Node.js 12.x
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn
-      - run: yarn tsc
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Typechecking
+        run: yarn tsc
 
   test:
     needs: tsc
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+
+      - name: Set Node.js 12.x
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn
-      - run: yarn test
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Test
+        run: yarn test
 
   publish-npm:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+
+      - name: Set Node.js 12.x
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: yarn build
-      - run: cd pkg
-      - run: yarn publish --access public
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build
+
+      - name: Publish
+        working-directory: pkg
+        run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
