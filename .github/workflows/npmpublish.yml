@@ -23,11 +23,11 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      # - name: Typechecking
-      #   run: yarn tsc
+      - name: Typechecking
+        run: yarn tsc
 
-      # - name: Test
-      #   run: yarn test
+      - name: Test
+        run: yarn test
 
       - name: Build
         run: yarn build
