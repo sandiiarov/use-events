@@ -29,7 +29,7 @@ jobs:
         run: yarn test
 
   publish-npm:
-    needs: test
+    needs: tsc_test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
