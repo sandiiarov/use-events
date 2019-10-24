@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  tsc_test:
+  publish-npm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -28,25 +28,11 @@ jobs:
       - name: Test
         run: yarn test
 
-  publish-npm:
-    needs: tsc_test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-
-      - name: Set Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-
-      - name: Install dependencies
-        run: yarn
-
       - name: Build
         run: yarn build
 
       - name: Publish
-        working-directory: pkg
         run: yarn publish --access public
+        working-directory: ./pkg
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
