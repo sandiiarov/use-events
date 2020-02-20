@@ -955,14 +955,15 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-build-types@0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@pika/plugin-build-types/-/plugin-build-types-0.6.1.tgz#11f6ee70c10802092acf62b98ccb58dccc07f71d"
-  integrity sha512-3eM7JGsaZ0uE0RsDpFue4xYgRE+2UVE3yqJWSJAfQYQwNU6dlGjB7LTWSdHo3+0+YqL6/BD0o9Nb+7mpCSznOw==
+"@pika/plugin-build-types@0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-types/-/plugin-build-types-0.9.2.tgz#4f1ddb868567f2af85b5dba60f7a6673ff224ac2"
+  integrity sha512-zV1TCcPvxFDyDafxAp3a8q5BQxT3rk4RweoKlZl5BdN5vksv6i76F7fglAHhN44a6wDuH9valrcT6FqYD/6SuQ==
   dependencies:
+    "@pika/types" "^0.9.2"
     execa "^2.0.0"
     mkdirp "^0.5.1"
-    typescript "~3.4.0"
+    typescript "^3.7.0"
 
 "@pika/plugin-build-web@0.6.1":
   version "0.6.1"
@@ -984,6 +985,11 @@
   version "0.6.1"
   resolved "https://registry.npmjs.org/@pika/types/-/types-0.6.1.tgz#864b1803f3a95093b871ced387bb87779ebfc862"
   integrity sha512-1ZsOHGc0qJDofO+/98PfchHJqJjtfZL3liVGi4QZ28GtLmTVuZ4SUJFa5NgbsYawnrr//pdNOfx9JiaLFKpzrA==
+
+"@pika/types@^0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.9.2.tgz#60ad16afe1293878232e28937d9007340c59ff7c"
+  integrity sha512-AzZTkHtM0A67+xMVhmSeJDteSMS+RfXGuM+/oVbo1PGD19ic7fuimv5b0TW8dKoZuxpVxiwVAai+sFRSNmfI3g==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -5856,10 +5862,10 @@ typescript@3.6.4:
   resolved "https://registry.npmjs.org/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
   integrity sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
 
-typescript@~3.4.0:
-  version "3.4.5"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
-  integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
+typescript@^3.7.0:
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.5.tgz#0692e21f65fd4108b9330238aac11dd2e177a1ae"
+  integrity sha512-/P5lkRXkWHNAbcJIiHPfRoKqyd7bsyCma1hZNUGfn20qm64T6ZBlrzprymeu918H+mB/0rIg2gGK/BXkhhYgBw==
 
 uglify-js@^3.1.4:
   version "3.6.1"
