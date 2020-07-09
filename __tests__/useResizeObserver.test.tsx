@@ -1,9 +1,11 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import ResizeObserver from 'resize-observer-polyfill';
-import { useResizeObserver } from '../src';
+import { render } from "@testing-library/react";
+import React from "react";
+import ResizeObserver from "resize-observer-polyfill";
+import { useResizeObserver } from "../src";
 
-jest.mock('resize-observer-polyfill');
+// @ts-ignore
+jest.spyOn(window, "requestAnimationFrame").mockImplementation((cb) => cb());
+jest.mock("resize-observer-polyfill");
 
 const TestComponent = () => {
   const ref = React.useRef(null);
@@ -15,7 +17,7 @@ const resize = (width: number, height: number) => {
   // @ts-ignore
   ResizeObserver.mockReset();
   // @ts-ignore
-  ResizeObserver.mockImplementation(cb => {
+  ResizeObserver.mockImplementation((cb) => {
     cb([{ contentRect: { width, height } }]);
     return { observe: jest.fn, disconnect: jest.fn };
   });
@@ -24,7 +26,7 @@ const resize = (width: number, height: number) => {
   return container.textContent;
 };
 
-test('useResizeObserver', () => {
-  expect(resize(100, 100)).toBe('200');
-  expect(resize(200, 200)).toBe('400');
+test("useResizeObserver", () => {
+  expect(resize(100, 100)).toBe("200");
+  expect(resize(200, 200)).toBe("400");
 });
