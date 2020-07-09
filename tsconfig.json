@@ -5,9 +5,7 @@
     "moduleResolution": "node",
     "jsx": "react",
     "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "include": ["src"]
 }
