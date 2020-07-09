@@ -1,6 +1,6 @@
 {
   "name": "use-events",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "license": "MIT",
   "description": "Event Hooks",
   "repository": {
@@ -44,9 +44,7 @@
   "peerDependencies": {
     "react": ">=16.8.1"
   },
-  "dependencies": {
-    "resize-observer-polyfill": "1.5.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.6.4",
     "@babel/preset-env": "7.6.3",
