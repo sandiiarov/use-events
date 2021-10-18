@@ -1,0 +1,78 @@
+---
+name: useScroll
+---
+
+import { Playground } from 'docz';
+import { useScroll } from '../src';
+
+# useScroll
+
+```js
+import { useScroll } from 'use-events';
+```
+
+```jsx
+const Example = () => {
+  const style = {
+    height: '150px',
+    width: '150px',
+    background: '#000',
+    overflow: 'auto',
+    item: {
+      background: '#ddd',
+      position: 'relative',
+      height: '20px',
+      width: '20px',
+      top: '200px',
+      left: '200px',
+    },
+  };
+  const [scrollTop, scrollLeft, offsetHeight, offsetWidth, bind] = useScroll();
+  return (
+    <>
+      <b>scrollTop:</b> {scrollTop}<br />
+      <b>scrollLeft:</b> {scrollLeft}<br />
+      <b>offsetHeight:</b> {offsetHeight}<br />
+      <b>offsetWidth:</b>  {offsetWidth}
+      <hr />
+      <div {...bind} style={style}>
+        <div style={style.item} />
+      </div>
+    </>
+  );
+};
+```
+
+<Playground>
+  {
+    () => {
+      const style = {
+        height: '150px',
+        width: '150px',
+        background: '#000',
+        overflow: 'auto',
+        item: {
+          background: '#ddd',
+          position: 'relative',
+          height: '20px',
+          width: '20px',
+          top: '200px',
+          left: '200px',
+        },
+      };
+      const [scrollTop, scrollLeft, offsetHeight, offsetWidth, bind] = useScroll();
+      return (
+        <>
+          <b>scrollTop:</b> {scrollTop}<br />
+          <b>scrollLeft:</b> {scrollLeft}<br />
+          <b>offsetHeight:</b> {offsetHeight}<br />
+          <b>offsetWidth:</b>  {offsetWidth}
+          <hr />
+          <div {...bind} style={style}>
+            <div style={style.item} />
+          </div>
+        </>
+      );
+    }
+  }
+</Playground>
