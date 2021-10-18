@@ -901,10 +901,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@pika/babel-plugin-esm-import-rewrite@^0.3.7":
-  version "0.3.16"
-  resolved "https://registry.npmjs.org/@pika/babel-plugin-esm-import-rewrite/-/babel-plugin-esm-import-rewrite-0.3.16.tgz#884aa5ca51f1727e0a932eca8602b6a99e0aa163"
-  integrity sha512-1CzhjFElpe4EkQqZzd/CKLLMj/tIluKb/bY7O76EqXkaEg+HU54ruvIKKMje5qq2cnHyRk1FeIq1dJz5JITjJQ==
+"@pika/babel-plugin-esm-import-rewrite@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@pika/babel-plugin-esm-import-rewrite/-/babel-plugin-esm-import-rewrite-0.6.1.tgz#6f62833cbd1d850f3fec315a5416b2c5d1cec6f9"
+  integrity sha512-B6CMCfc8EZT/0WUqPZJWf7LCXbqq4R41F5Xbifcy0HaMDxScoEW1zFPrYQLUs9+8B365JnKq3n+U6kMkFYT45w==
 
 "@pika/cli@latest":
   version "0.2.0"
@@ -972,18 +972,24 @@
     "@types/node" "^10.12.18"
     rollup "^1.1.0"
 
-"@pika/plugin-standard-pkg@0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.6.1.tgz#85111790519bd2916769cbc2eb7dd87cab2d3c0a"
-  integrity sha512-ulcli/3LQIimDYy5ZD0+VwbVLdY+MtbnCJ6eY6IiYHf0a+qXAfoszIVPbr7eQFfZRwddY45OrF3HDuYHnhj2PA==
+"@pika/plugin-standard-pkg@0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.9.2.tgz#9bae9ff151d46c852d39a423d7b80e11bb335d69"
+  integrity sha512-dr1H2fxUBCk1A77uxk9swwWklU5L2araTdgzpZO7ebIfbtp9KBfbEUxSGB/uLGlUIqueYvZo/xugpvivIlJFlA==
   dependencies:
+    "@pika/types" "^0.9.2"
     "@types/node" "^10.12.18"
-    standard-pkg "^0.4.0"
+    standard-pkg "^0.5.0"
 
 "@pika/types@^0.6.0":
   version "0.6.1"
   resolved "https://registry.npmjs.org/@pika/types/-/types-0.6.1.tgz#864b1803f3a95093b871ced387bb87779ebfc862"
   integrity sha512-1ZsOHGc0qJDofO+/98PfchHJqJjtfZL3liVGi4QZ28GtLmTVuZ4SUJFa5NgbsYawnrr//pdNOfx9JiaLFKpzrA==
+
+"@pika/types@^0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.9.2.tgz#60ad16afe1293878232e28937d9007340c59ff7c"
+  integrity sha512-AzZTkHtM0A67+xMVhmSeJDteSMS+RfXGuM+/oVbo1PGD19ic7fuimv5b0TW8dKoZuxpVxiwVAai+sFRSNmfI3g==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -5487,10 +5493,10 @@ stack-utils@^1.0.1:
   resolved "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz#33eba3897788558bebfc2db059dc158ec36cebb8"
   integrity sha512-MTX+MeG5U994cazkjd/9KNAapsHnibjMLnfXodlkXw76JEea0UiNzrqidzo1emMwk7w5Qhc9jd4Bn9TBb1MFwA==
 
-standard-pkg@^0.4.0:
-  version "0.4.1"
-  resolved "https://registry.npmjs.org/standard-pkg/-/standard-pkg-0.4.1.tgz#e1426418aca0844865a83b39b1e61549cca7fa27"
-  integrity sha512-gS1/ovMOXKUmiBdkqg+O7blazMffUi88vkNbzDrmhjZq8jp9N6/Ynl8lVD22Y8UTgiK8IUsKSoy97nsdZGlQow==
+standard-pkg@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/standard-pkg/-/standard-pkg-0.5.0.tgz#2fa2d858d5dbb99ce7aae7cea6e4bbeeaabc55d5"
+  integrity sha512-7w+8qU4hBMXeh5GmUTG39ODsqdaWrNZ8nq1gpPZu990DjuGVY6eCAhrcY+zFGc5OWlANqlF0XVArSU38J3HUUQ==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/parser" "^7.1.5"
@@ -5498,7 +5504,7 @@ standard-pkg@^0.4.0:
     "@babel/plugin-syntax-import-meta" "^7.2.0"
     "@babel/preset-typescript" "^7.1.0"
     "@babel/traverse" "^7.1.5"
-    "@pika/babel-plugin-esm-import-rewrite" "^0.3.7"
+    "@pika/babel-plugin-esm-import-rewrite" "^0.6.1"
     "@types/minimist" "^1.2.0"
     chalk "^2.1.0"
     glob "^7.1.1"
