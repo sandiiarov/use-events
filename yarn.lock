@@ -705,7 +705,14 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-typescript" "^7.6.0"
 
-"@babel/runtime@^7.5.4", "@babel/runtime@^7.6.0", "@babel/runtime@^7.6.2":
+"@babel/runtime@^7.12.5":
+  version "7.15.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
+  integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.6.0", "@babel/runtime@^7.6.2":
   version "7.6.3"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
   integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
@@ -1021,13 +1028,16 @@
     pretty-format "^24.9.0"
     wait-for-expect "^3.0.0"
 
-"@testing-library/react-hooks@2.0.3":
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/@testing-library/react-hooks/-/react-hooks-2.0.3.tgz#305a6c76facb5fa1d185792b9eb11b1ca1b63fb7"
-  integrity sha512-adm+7b1gcysGka8VuYq/ObBrIBJTT9QmCEIqPpuxozWFfVDgxSbzBGc44ia/WYLGVt2dqFIOc6/DmAmu/pa0gQ==
+"@testing-library/react-hooks@7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-7.0.2.tgz#3388d07f562d91e7f2431a4a21b5186062ecfee0"
+  integrity sha512-dYxpz8u9m4q1TuzfcUApqi8iFfR6R0FaMbr2hjZJy1uC8z+bO/K4v8Gs9eogGKYQop7QsrBTFkv/BCF7MzD2Cg==
   dependencies:
-    "@babel/runtime" "^7.5.4"
-    "@types/testing-library__react-hooks" "^2.0.0"
+    "@babel/runtime" "^7.12.5"
+    "@types/react" ">=16.9.0"
+    "@types/react-dom" ">=16.9.0"
+    "@types/react-test-renderer" ">=16.9.0"
+    react-error-boundary "^3.1.0"
 
 "@testing-library/react@9.3.0":
   version "9.3.0"
@@ -1159,10 +1169,17 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-test-renderer@*":
-  version "16.9.0"
-  resolved "https://registry.npmjs.org/@types/react-test-renderer/-/react-test-renderer-16.9.0.tgz#d60f530ecf4c906721511603cca711b4fa830d41"
-  integrity sha512-bN5EyjtuTY35xX7N5j0KP1vg5MpUXHpFTX6tGsqkNOthjNvet4VQOYRxFh+NT5cDSJrATmAFK9NLeYZ4mp/o0Q==
+"@types/react-dom@>=16.9.0":
+  version "17.0.9"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
+  integrity sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-test-renderer@>=16.9.0":
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-17.0.1.tgz#3120f7d1c157fba9df0118dae20cb0297ee0e06b"
+  integrity sha512-3Fi2O6Zzq/f3QR9dRnlnHso9bMl7weKCviFmfF6B4LS1Uat6Hkm15k0ZAQuDz+UBq6B3+g+NM6IT2nr5QgPzCw==
   dependencies:
     "@types/react" "*"
 
@@ -1182,6 +1199,20 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/react@>=16.9.0":
+  version "17.0.30"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.30.tgz#2f8e6f5ab6415c091cc5e571942ee9064b17609e"
+  integrity sha512-3Dt/A8gd3TCXi2aRe84y7cK1K8G+N9CZRDG8kDGguOKa0kf/ZkSwTmVIDPsm/KbQOVMaDJXwhBtuOXxqwdpWVg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -1193,14 +1224,6 @@
   integrity sha512-KygLl2uDAC2MDaEPK4r7yPH2EAQkWrj4frwLZLEJ1bCk2LBUqWziqxMNk7++sjJNVRLYtQ2EhVy75uUUBt+z/g==
   dependencies:
     pretty-format "^24.3.0"
-
-"@types/testing-library__react-hooks@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/@types/testing-library__react-hooks/-/testing-library__react-hooks-2.0.0.tgz#7b289d64945517ae8ba9cbcb0c5b282432aaeffa"
-  integrity sha512-YUVqXGCChJKEJ4aAnMXqPCq0NfPAFVsJeGIb2y/iiMjxwyu+45+vR+AHOwjJHHKEHeC0ZhOGrZ5gSEmaJe4tyQ==
-  dependencies:
-    "@types/react" "*"
-    "@types/react-test-renderer" "*"
 
 "@types/testing-library__react@^9.1.0":
   version "9.1.2"
@@ -1969,6 +1992,11 @@ csstype@^2.2.0:
   version "2.6.7"
   resolved "https://registry.npmjs.org/csstype/-/csstype-2.6.7.tgz#20b0024c20b6718f4eda3853a1f5a1cce7f5e4a5"
   integrity sha512-9Mcn9sFbGBAdmimWb2gLVDtFJzeKtDGIr76TUqmjZrw9LFXBMSU70lcs+C0/7fyCd6iBDqmksUcCOUIkisPHsQ==
+
+csstype@^3.0.2:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.9.tgz#6410af31b26bd0520933d02cbc64fce9ce3fbf0b"
+  integrity sha512-rpw6JPxK6Rfg1zLOYCSwle2GFOOsnjmDYDaBwEcwoOg4qlsIVCN789VkBZDJAGi4T07gI4YSutR43t9Zz4Lzuw==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -4844,6 +4872,13 @@ react-dom@16.10.2:
     prop-types "^15.6.2"
     scheduler "^0.16.2"
 
+react-error-boundary@^3.1.0:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/react-error-boundary/-/react-error-boundary-3.1.3.tgz#276bfa05de8ac17b863587c9e0647522c25e2a0b"
+  integrity sha512-A+F9HHy9fvt9t8SNDlonq01prnU8AmkjvGKV4kk8seB9kU3xMEO8J/PQlLVmoOIDODl5U2kufSBs4vrWIqhsAA==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+
 react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   version "16.10.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.10.2.tgz#984120fd4d16800e9a738208ab1fba422d23b5ab"
@@ -4956,6 +4991,11 @@ regenerator-runtime@^0.13.2:
   version "0.13.3"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
+
+regenerator-runtime@^0.13.4:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
 regenerator-transform@^0.14.0:
   version "0.14.1"
