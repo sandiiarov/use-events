@@ -59,7 +59,7 @@
     "@pika/plugin-standard-pkg": "0.6.1",
     "@testing-library/react": "9.3.0",
     "@testing-library/react-hooks": "2.0.3",
-    "@types/jest": "24.0.18",
+    "@types/jest": "24.9.1",
     "@types/react": "16.9.15",
     "jest": "24.9.0",
     "react": "16.10.2",
