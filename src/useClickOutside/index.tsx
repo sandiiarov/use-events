@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 function useClickOutside(
-  refs: React.RefObject<HTMLElement>[],
-  onClickOutside: (e: MouseEvent) => void
+  refs: React.RefObject<HTMLElement | null>[],
+  onClickOutside: (e: MouseEvent) => void,
 ): [boolean] {
   const [isActive, setActive] = React.useState(false);
 
   const isOutside = React.useCallback(
     (e: MouseEvent) => {
-      const test = refs.map(ref => {
+      const test = refs.map((ref) => {
         return (
           ref.current !== null && !ref.current.contains(e.target as HTMLElement)
         );
@@ -16,7 +16,7 @@ function useClickOutside(
 
       return test.every(Boolean);
     },
-    [refs]
+    [refs],
   );
 
   const mousedown = React.useCallback(
@@ -26,7 +26,7 @@ function useClickOutside(
         onClickOutside(e);
       }
     },
-    [isOutside, onClickOutside]
+    [isOutside, onClickOutside],
   );
 
   const mouseup = React.useCallback(
@@ -35,16 +35,16 @@ function useClickOutside(
         setActive(false);
       }
     },
-    [isOutside]
+    [isOutside],
   );
 
   React.useEffect(() => {
-    document.addEventListener('mousedown', mousedown);
-    document.addEventListener('mouseup', mouseup);
+    document.addEventListener("mousedown", mousedown);
+    document.addEventListener("mouseup", mouseup);
 
     return () => {
-      document.removeEventListener('mousedown', mousedown);
-      document.removeEventListener('mouseup', mouseup);
+      document.removeEventListener("mousedown", mousedown);
+      document.removeEventListener("mouseup", mouseup);
     };
   }, [refs, onClickOutside]);
 
