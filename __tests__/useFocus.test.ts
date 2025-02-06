@@ -1,14 +1,12 @@
-import { act, renderHook } from '@testing-library/react-hooks';
-import { useFocus } from '../src';
+import { act, renderHook } from "@testing-library/react";
+import { useFocus } from "../src";
 
-test('useFocus should react on focus/blur events', () => {
-  let isFocused, bind;
+test("useFocus should react on focus/blur events", () => {
+  const { result } = renderHook(() => useFocus());
 
-  renderHook(() => ([isFocused, bind] = useFocus()));
-
-  expect(isFocused).toBeFalsy();
-  act(() => bind.onFocus());
-  expect(isFocused).toBeTruthy();
-  act(() => bind.onBlur());
-  expect(isFocused).toBeFalsy();
+  expect(result.current[0]).toBeFalsy();
+  act(() => result.current[1].onFocus({} as React.FocusEvent));
+  expect(result.current[0]).toBeTruthy();
+  act(() => result.current[1].onBlur({} as React.FocusEvent));
+  expect(result.current[0]).toBeFalsy();
 });

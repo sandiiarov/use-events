@@ -1,14 +1,12 @@
-import { act, renderHook } from '@testing-library/react-hooks';
-import { useTouch } from '../src';
+import { act, renderHook } from "@testing-library/react";
+import { useTouch } from "../src";
 
-test('useTouch should react on touchStart/touchEnd events', () => {
-  let isTouched, bind;
+test("useTouch should react on touchStart/touchEnd events", () => {
+  const { result } = renderHook(() => useTouch());
 
-  renderHook(() => ([isTouched, bind] = useTouch()));
-
-  expect(isTouched).toBeFalsy();
-  act(() => bind.onTouchStart());
-  expect(isTouched).toBeTruthy();
-  act(() => bind.onTouchEnd());
-  expect(isTouched).toBeFalsy();
+  expect(result.current[0]).toBeFalsy();
+  act(() => result.current[1].onTouchStart({} as React.TouchEvent));
+  expect(result.current[0]).toBeTruthy();
+  act(() => result.current[1].onTouchEnd({} as React.TouchEvent));
+  expect(result.current[0]).toBeFalsy();
 });

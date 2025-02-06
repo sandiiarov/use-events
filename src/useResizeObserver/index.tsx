@@ -2,9 +2,9 @@ import React from "react";
 import ResizeObserver from "resize-observer-polyfill";
 
 function useResizeObserver(
-  ref: React.RefObject<HTMLElement>
+  ref: React.RefObject<HTMLElement | null>,
 ): [number, number] {
-  const animationFrameID = React.useRef<number>();
+  const animationFrameID = React.useRef<number>(0);
   const [width, setWidth] = React.useState(0);
   const [height, setHeight] = React.useState(0);
 

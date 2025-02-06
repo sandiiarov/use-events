@@ -1,14 +1,12 @@
-import { act, renderHook } from '@testing-library/react-hooks';
-import { useHover } from '../src';
+import { act, renderHook } from "@testing-library/react";
+import { useHover } from "../src";
 
-test('useHover should react on mouseEnter/mouseLeave events', () => {
-  let isHovered, bind;
+test("useHover should react on mouseEnter/mouseLeave events", () => {
+  const { result } = renderHook(() => useHover());
 
-  renderHook(() => ([isHovered, bind] = useHover()));
-
-  expect(isHovered).toBeFalsy();
-  act(() => bind.onMouseEnter());
-  expect(isHovered).toBeTruthy();
-  act(() => bind.onMouseLeave());
-  expect(isHovered).toBeFalsy();
+  expect(result.current[0]).toBeFalsy();
+  act(() => result.current[1].onMouseEnter({} as React.MouseEvent));
+  expect(result.current[0]).toBeTruthy();
+  act(() => result.current[1].onMouseLeave({} as React.MouseEvent));
+  expect(result.current[0]).toBeFalsy();
 });

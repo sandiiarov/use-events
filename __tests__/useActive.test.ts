@@ -1,14 +1,12 @@
-import { act, renderHook } from '@testing-library/react-hooks';
-import { useActive } from '../src';
+import { act, renderHook } from "@testing-library/react";
+import { useActive } from "../src";
 
-test('useActive should react on mouseDown/mouseUp events', () => {
-  let isActive, bind;
+test("useActive should react on mouseDown/mouseUp events", () => {
+  const { result } = renderHook(() => useActive());
 
-  renderHook(() => ([isActive, bind] = useActive()));
-
-  expect(isActive).toBeFalsy();
-  act(() => bind.onMouseDown());
-  expect(isActive).toBeTruthy();
-  act(() => bind.onMouseUp());
-  expect(isActive).toBeFalsy();
+  expect(result.current[0]).toBeFalsy();
+  act(() => result.current[1].onMouseDown({} as React.MouseEvent));
+  expect(result.current[0]).toBeTruthy();
+  act(() => result.current[1].onMouseUp({} as React.MouseEvent));
+  expect(result.current[0]).toBeFalsy();
 });
