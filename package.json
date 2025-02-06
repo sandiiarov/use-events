@@ -57,7 +57,7 @@
     "@pika/plugin-build-types": "0.6.1",
     "@pika/plugin-build-web": "0.6.1",
     "@pika/plugin-standard-pkg": "0.6.1",
-    "@testing-library/dom ": "10.4.0",
+    "@testing-library/dom": "10.4.0",
     "@testing-library/react": "16.2.0",
     "@types/jest": "24.0.18",
     "@types/react": "19.0.8",
