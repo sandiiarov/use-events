@@ -21,6 +21,7 @@ https://sandiiarov.github.io/use-events
 - [useHover](https://sandiiarov.github.io/use-events/#/docs-use-hover)
 - [useMousePosition](https://sandiiarov.github.io/use-events/#/docs-use-mouse-position)
 - [useTouch](https://sandiiarov.github.io/use-events/#/docs-use-touch)
+- [useScroll](https://sandiiarov.github.io/use-events/#/docs-use-scroll)
 - [useWindowResize](https://sandiiarov.github.io/use-events/#/docs-use-window-resize)
 - [useResizeObserver](https://sandiiarov.github.io/use-events/#/docs-use-resize-observer)
 
